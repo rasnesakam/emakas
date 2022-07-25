@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="bg-ground h-screen"> 
+      <div className="bg-ground min-h-screen"> 
         <RoutedContent />
         <Footer />
       </div>
