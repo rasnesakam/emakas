@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { fetchData } from "../../../functions/fetchData";
 import { FeaturedImage, ArticleSection, Comments, Recommends } from "./components";
 
-const Page = function(props){
+const Page = (props) => {
     const { uri } = useParams();
     const [blog,setBlog] = useState({});
     useEffect(() => {

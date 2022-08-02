@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-
 import { Blogs } from "./Blogs";
 import { About } from "./About";
 import { Home } from "./Home";
 import { Page } from "./Blogs/Page";
 import { Admin } from "./Admin";
+import { Post } from "./Admin/Post";
 
 export const RoutedContent = () => {
   return (
@@ -12,7 +12,7 @@ export const RoutedContent = () => {
         <Routes>
             <Route path="/" element={<Home />}>
 				<Route path="admin" element={Admin}>
-					<Route path="post" element={}/>
+					<Route path="post" element={Post}/>
 				</Route>
 				<Route path="blog" element={<Blogs />} />
 				<Route path="page">

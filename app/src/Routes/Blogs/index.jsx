@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { BlogItem } from "./components"
 import { SearchBar } from "../../components/SearchBar"
