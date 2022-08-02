@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 
-import { Blogs } from "../../Routes/Blogs";
-import { About } from "../../Routes/About";
-import { Home } from "../../Routes/Home";
-import { Page } from "../../Routes/Blogs/Page";
-import { Admin } from "../../Routes/Admin";
+import { Blogs } from "./Blogs";
+import { About } from "./About";
+import { Home } from "./Home";
+import { Page } from "./Blogs/Page";
+import { Admin } from "./Admin";
 
 export const RoutedContent = () => {
   return (

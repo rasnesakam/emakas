@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { BlogItem } from "../../components/BlogItem"
+import { BlogItem } from "./components"
 import { SearchBar } from "../../components/SearchBar"
 import { fetchData } from "../../functions/fetchData";
 
