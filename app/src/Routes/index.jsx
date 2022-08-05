@@ -7,20 +7,21 @@ import { Admin } from "./Admin";
 import { Post } from "./Admin/Post";
 
 export const RoutedContent = () => {
-  return (
-    <div className="container mx-auto p-5">
-        <Routes>
-            <Route path="/" element={<Home />}>
-				<Route path="admin" element={Admin}>
-					<Route path="post" element={Post}/>
+
+	
+	return (
+		<div className="container mx-auto p-5">
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/admin" element={<Admin />}>
+					<Route path="post" element={<Admin />} />
 				</Route>
-				<Route path="blog" element={<Blogs />} />
-				<Route path="page">
+				<Route path="/blog" element={<Blogs />} />
+				<Route path="/page">
 					<Route path=":uri" element={<Page />} />
 				</Route>
-				<Route path="about" element={<About />} />
-			</Route>
-        </Routes>
-    </div>
-  );
+				<Route path="/about" element={<About />} />
+			</Routes>
+		</div>
+	);
 };

@@ -15,6 +15,7 @@ const Page = (props) => {
         loadData();
     },[])
     return <>
+	{uri}
         {/* Featured image */}
         <FeaturedImage blog={blog}/>
 
