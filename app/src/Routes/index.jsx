@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { MediumBlogs } from "./MediumBlog";
 import { Blogs } from "./Blogs";
 import { About } from "./About";
 import { Home } from "./Home";
@@ -13,13 +14,13 @@ export const RoutedContent = () => {
 		<div className="container mx-auto p-5">
 			<Routes>
 				<Route path="/" element={<Home />} />
+
 				<Route path="/admin" element={<Admin />}>
 					<Route path="post" element={<Admin />} />
 				</Route>
-				<Route path="/blog" element={<Blogs />} />
-				<Route path="/page">
-					<Route path=":uri" element={<Page />} />
-				</Route>
+				
+				<Route path="/blog" element={<MediumBlogs />} />
+				
 				<Route path="/about" element={<About />} />
 			</Routes>
 		</div>

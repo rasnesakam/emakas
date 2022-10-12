@@ -6,13 +6,13 @@ import { RoutedContent } from "./Routes";
 
 function App() {
   return (
-    <>
+    <div className="bg-ground">
       <Navbar />
-      <div className="bg-ground min-h-screen"> 
+      <div className=" min-h-screen"> 
         <RoutedContent />
         <Footer />
       </div>
-    </>
+    </div>
   );
 }
 

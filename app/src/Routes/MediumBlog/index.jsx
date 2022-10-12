@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { BlogItem } from "./components"
+import { MediumBlogItem } from "./components"
 import { SearchBar } from "../../components/SearchBar"
 import { fetchData } from "../../functions/fetchData";
 
-export const Blogs = () =>{
+export const MediumBlogs = () =>{
 
     const [items,setItems] = useState({feed:"",items:[],status:"ok"});
     useEffect(() => {
@@ -16,17 +16,12 @@ export const Blogs = () =>{
 
     return (
         <div >
-            <div>
-                < SearchBar onSearch={async (keyword)=>{
-                    let datas = await fetchData({url:'https://jsonplaceholder.typicode.com/posts',args:{"search":keyword}});
-                    setItems(datas);
-                }}/>
-            </div>
+            
             <div>
 				<div className="w-full mx-auto md:w-1/2">	
 					<ul className="list-none">
 
-						{items.items.map((item,index) => <li key={index} className="py-2"><BlogItem item={item} /></li>)}
+						{items.items.map((item,index) => <li key={index} className="my-5"><MediumBlogItem item={item} /></li>)}
 
 					</ul>
 				</div>

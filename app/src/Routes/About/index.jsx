@@ -1,5 +1,10 @@
+import { HeadSection, BodySection, FootSection } from "./components";
 export const About = () => {
-    return (<>
-        <h1>Hakkında</h1>
-    </>);
+    return (<div>
+        
+		<HeadSection />
+		<BodySection />
+		<FootSection />
+		
+    </div>);
 }
