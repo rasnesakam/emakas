@@ -1,0 +1,60 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Category {
+  id        String     @id @default(uuid())
+  name      String     @unique @db.VarChar(30)
+  PostDatas MetaData[]
+}
+
+model Tag {
+  id        String     @id @default(uuid())
+  name      String     @unique @db.VarChar(30)
+  PostDatas MetaData[]
+}
+
+model SEOTag {
+  id         String    @id @default(uuid())
+  name       String    @unique @db.VarChar(30)
+  MetaData   MetaData? @relation(fields: [metaDataId], references: [id])
+  metaDataId String?
+}
+
+model SEODesc {
+  id       String     @id @default(uuid())
+  name     String     @db.VarChar(120)
+  MetaData MetaData[]
+}
+
+model MetaData {
+  id         String    @id @default(uuid())
+  created    DateTime  @default(now())
+  visible    Boolean   @default(false)
+  post       Post      @relation(fields: [postId], references: [id])
+  postId     String    @unique
+  category   Category? @relation(fields: [categoryId], references: [id])
+  categoryId String?
+  tag        Tag[]
+  tagId      String?
+  seoTag     SEOTag[]
+  seoDesc    SEODesc   @relation(fields: [sEODescId], references: [id])
+  sEODescId  String    @unique
+}
+
+model Post {
+  id          String    @id @default(uuid())
+  featuredImg String    @db.VarChar(48)
+  title       String    @db.VarChar(30)
+  content     String
+  uri         String    @db.VarChar(30)
+  meta        MetaData?
+}
