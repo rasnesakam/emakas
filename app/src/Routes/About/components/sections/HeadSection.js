@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 
 const HeadSection = () => {
 	let message = `
-	Merhaba. Dünya
+	Merhaba. Ben Ensar. Beykent üniversitesi bilgisayar mühendisliği 4. sınıf öğrencisiyim. Resim yapmayı ve arkadaşlarımla oyun oynamayı severim
 	`;
-	const [user, setUSer] = useState({name:"Ensar Makas",message:"Hayatım..."})
+	const [user, setUSer] = useState({name:"Ensar Makas",message})
 
-	return <div className="bg-primary h-screen -mt-5 absolute left-0 right-0 flex flex-col md:flex-row">
+	return <div className="bg-primary mh-screen -mt-5 absolute left-0 right-0 flex flex-col md:flex-row">
 		<div className="">
 			<img className="w-full" src="https://avatars.githubusercontent.com/u/45129228?v=4" />
 		</div>

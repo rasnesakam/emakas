@@ -16,6 +16,9 @@ function Navbar() {
         <li className="p-2 bg-primary text-secondary hover:bg-secondary hover:text-primary">
           <Link to="blog" className="">Blog</Link>
         </li>
+		<li className="p-2 bg-primary text-secondary hover:bg-secondary hover:text-primary">
+          <Link to="unauthorized" className="">Servisler</Link>
+        </li>
         <li className="p-2 bg-primary text-secondary hover:bg-secondary hover:text-primary">
           <Link to="about">Hakkında</Link>
         </li>
