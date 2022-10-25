@@ -58,3 +58,22 @@ model Post {
   uri         String    @db.VarChar(30)
   meta        MetaData?
 }
+
+
+model User {
+	id String @id @default(uuid())
+	name String @db.VarChar(25)
+	user_name String @db.VarChar(25)
+	surname String @db.VarChar(25)
+	email String @db.VarChar(25)
+	passwordHash String @db.VarChar(64) // Hashed with HS256
+}
+
+model UserTokens{
+	id String @id @default(uuid())
+	iss String @db.VarChar(20) // Issuer. (Issuer domain)
+	sub String @db.VarChar(20) // Subject of JWT (Subject ip or mac address)
+	aud String @db.VarChar(20) // Audience of this JWT
+	exp String @db.VarChar(10) // Expiration Date
+
+}
