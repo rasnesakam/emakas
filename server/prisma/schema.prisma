@@ -72,7 +72,6 @@ model User {
 model UserTokens{
 	id String @id @default(uuid())
 	iss String @db.VarChar(20) // Issuer. (Issuer domain)
-	sub String @db.VarChar(20) // Subject of JWT (Subject ip or mac address)
 	aud String @db.VarChar(20) // Audience of this JWT
 	exp String @db.VarChar(10) // Expiration Date
 
