@@ -11,9 +11,16 @@ datasource db {
 }
 
 model Category {
-  id        String     @id @default(uuid())
-  name      String     @unique @db.VarChar(30)
-  PostDatas MetaData[]
+  id              String     @id @default(uuid())
+  name            String     @db.VarChar(30)
+  normalized_name String     @unique @db.VarChar(30)
+  PostDatas       MetaData[]
+}
+
+model Area {
+  id              String @id @default(uuid())
+  name            String @db.VarChar(30)
+  normalized_name String @unique @db.VarChar(30)
 }
 
 model Tag {
@@ -23,16 +30,16 @@ model Tag {
 }
 
 model SEOTag {
-  id         String    @id @default(uuid())
-  name       String    @unique @db.VarChar(30)
-  MetaData   MetaData? @relation(fields: [metaDataId], references: [id])
-  metaDataId String?
+  id         String   @id @default(uuid())
+  name       String   @unique @db.VarChar(30)
+  metadata   MetaData @relation(fields: [metadataId], references: [id])
+  metadataId String
 }
 
 model SEODesc {
-  id       String     @id @default(uuid())
-  name     String     @db.VarChar(120)
-  MetaData MetaData[]
+  id       String    @id @default(uuid())
+  name     String    @db.VarChar(120)
+  metadata MetaData?
 }
 
 model MetaData {
@@ -44,7 +51,6 @@ model MetaData {
   category   Category? @relation(fields: [categoryId], references: [id])
   categoryId String?
   tag        Tag[]
-  tagId      String?
   seoTag     SEOTag[]
   seoDesc    SEODesc   @relation(fields: [sEODescId], references: [id])
   sEODescId  String    @unique
@@ -56,23 +62,15 @@ model Post {
   title       String    @db.VarChar(30)
   content     String
   uri         String    @db.VarChar(30)
-  meta        MetaData?
+  metadata    MetaData?
 }
 
+// RELATIONS OTO: One To One, OTM: One To Many, MTM: Many To Many
 
-model User {
-	id String @id @default(uuid())
-	name String @db.VarChar(25)
-	user_name String @db.VarChar(25)
-	surname String @db.VarChar(25)
-	email String @db.VarChar(25)
-	passwordHash String @db.VarChar(64) // Hashed with HS256
-}
-
-model UserTokens{
-	id String @id @default(uuid())
-	iss String @db.VarChar(20) // Issuer. (Issuer domain)
-	aud String @db.VarChar(20) // Audience of this JWT
-	exp String @db.VarChar(10) // Expiration Date
-
-}
+// Post OTO Metadata
+// Metadata OTO Category
+// Metadata OTO User
+// Metadata OTO Area
+// Metadata OTO Seodesc
+// Tag OTM Metadata
+// Seotag OTM Metadata
