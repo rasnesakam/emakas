@@ -49,7 +49,9 @@ router.route("/").post(
 			})
 		};
 
-		upload();
+		upload().catch((err) => {
+			res.status(500).send(err.message);
+		});
 	}
 );
 
