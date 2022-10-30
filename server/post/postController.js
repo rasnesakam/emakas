@@ -15,31 +15,41 @@ router.use(bodyParser.json())
 router.route("/").get(
 	(req, res) => {
 		
-		async function getBlogs(){
-			const blogs = await prisma.blog.findMany();
+		async function getPosts(){
+			const blogs = await prisma.post.findMany();
 			res.status(200).send(blogs);
 		};
-		getBlogs();
+		getPosts();
 	}
 );
 
 router.route("/").post(
 	(req,res) => {
 		async function upload(){
-			await prisma.post.create({
+			let post = await prisma.post.create({
 				data: {
 					title: req.body.title,
-					featuredImg: req.body.featuredImg,
 					content: req.body.content,
-					uri: req.body.uri,
-					meta: {
-						create: {
-							
-						}
+					featuredImg: req.body.featuredImg,
+					metadata: {
+						visible: true,
+						tag: {
+							name: req.body.tag
+						},
+						category: {},
+						seoTag: [{
+							name: req.body.seoTag
+						}],
+						seoDesc: {
+							name: req.body.seoDesc
+						},
+
 					}
 				}
 			})
 		};
+
+		upload();
 	}
 );
 

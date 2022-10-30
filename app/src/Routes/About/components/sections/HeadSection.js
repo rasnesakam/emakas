@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const HeadSection = () => {
 	let message = `
-	Merhaba. Ben Ensar. Beykent üniversitesi bilgisayar mühendisliği 4. sınıf öğrencisiyim. Resim yapmayı ve arkadaşlarımla oyun oynamayı severim
+	Merhaba. Ben Ensar. Beykent üniversitesi bilgisayar mühendisliği 4. sınıf öğrencisiyim. Resim yapmayı ve tevuklu pilavı severim
 	`;
 	const [user, setUSer] = useState({name:"Ensar Makas",message})
 
