@@ -18,9 +18,10 @@ model Category {
 }
 
 model Area {
-  id              String @id @default(uuid())
-  name            String @db.VarChar(30)
-  normalized_name String @unique @db.VarChar(30)
+  id              String    @id @default(uuid())
+  name            String    @db.VarChar(30)
+  metaData        MetaData?
+  normalized_name String    @unique @db.VarChar(30)
 }
 
 model Tag {
@@ -50,6 +51,8 @@ model MetaData {
   postId     String    @unique
   category   Category? @relation(fields: [categoryId], references: [id])
   categoryId String?
+  area       Area      @relation(fields: [areaId], references: [id])
+  areaId     String    @unique
   tag        Tag[]
   seoTag     SEOTag[]
   seoDesc    SEODesc   @relation(fields: [sEODescId], references: [id])
