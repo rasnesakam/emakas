@@ -9,6 +9,7 @@ import { Post } from "./Admin/Post";
 import { Unauthorized } from "./Unauthorized";
 import { NotFound } from "./NotFound";
 import { Login } from "./Admin/Login";
+import {About as EditAbout} from "./Admin/About"
 
 export const RoutedContent = () => {
 
@@ -21,6 +22,7 @@ export const RoutedContent = () => {
 				<Route path="/admin" element={<Admin />}>
 					<Route path="post" element={<Post />} />
 					<Route path="login" element={<Login />} />
+					<Route path="about" element={<EditAbout />} />
 					<Route path="*" element={ <NotFound /> } />
 				</Route>
 				
