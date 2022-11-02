@@ -26,25 +26,32 @@ router.route("/").get(
 router.route("/").post(
 	(req,res) => {
 		async function upload(){
+			let metadata = await prisma.metaData.create({
+				data: {
+					visible: true,
+					description: req.body.metadata.description,
+					tag: {
+						name: req.body.metadata.tag
+					},
+					category: {
+						name:req.body.metadata.category.name.toString(),
+						normalized_name:req.body.metadata.category.name.toString().toUpperCase()
+					},
+				},
+				include: {
+					tag: true,
+					category: true
+				}
+			});
 			let post = await prisma.post.create({
 				data: {
 					title: req.body.title,
 					content: req.body.content,
 					featuredImg: req.body.featuredImg,
-					metadata: {
-						visible: true,
-						tag: {
-							name: req.body.tag
-						},
-						category: {},
-						seoTag: [{
-							name: req.body.seoTag
-						}],
-						seoDesc: {
-							name: req.body.seoDesc
-						},
-
-					}
+					metadata: metadata
+				},
+				include: {
+					metadata: true
 				}
 			})
 		};

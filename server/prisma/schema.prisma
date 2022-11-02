@@ -30,42 +30,27 @@ model Tag {
   PostDatas MetaData[]
 }
 
-model SEOTag {
-  id         String   @id @default(uuid())
-  name       String   @unique @db.VarChar(30)
-  metadata   MetaData @relation(fields: [metadataId], references: [id])
-  metadataId String
-}
-
-model SEODesc {
-  id       String    @id @default(uuid())
-  name     String    @db.VarChar(120)
-  metadata MetaData?
-}
-
 model MetaData {
-  id         String    @id @default(uuid())
-  created    DateTime  @default(now())
-  visible    Boolean   @default(false)
-  post       Post      @relation(fields: [postId], references: [id])
-  postId     String    @unique
-  category   Category? @relation(fields: [categoryId], references: [id])
-  categoryId String?
-  area       Area      @relation(fields: [areaId], references: [id])
-  areaId     String    @unique
-  tag        Tag[]
-  seoTag     SEOTag[]
-  seoDesc    SEODesc   @relation(fields: [sEODescId], references: [id])
-  sEODescId  String    @unique
+  id          String    @id @default(uuid())
+  created     DateTime  @default(now())
+  visible     Boolean   @default(false)
+  description String    @db.VarChar(156)
+  post        Post?
+  category    Category? @relation(fields: [categoryId], references: [id])
+  categoryId  String?
+  area        Area      @relation(fields: [areaId], references: [id])
+  areaId      String    @unique
+  tag         Tag[]
 }
 
 model Post {
-  id          String    @id @default(uuid())
-  featuredImg String    @db.VarChar(48)
-  title       String    @db.VarChar(30)
+  id          String   @id @default(uuid())
+  featuredImg String   @db.VarChar(48)
+  title       String   @db.VarChar(60)
   content     String
-  uri         String    @db.VarChar(30)
-  metadata    MetaData?
+  uri         String   @db.VarChar(60)
+  metadata    MetaData @relation(fields: [metadataId], references: [id])
+  metadataId  String   @unique
 }
 
 // RELATIONS OTO: One To One, OTM: One To Many, MTM: Many To Many
