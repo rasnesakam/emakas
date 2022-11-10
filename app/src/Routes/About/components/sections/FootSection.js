@@ -1,3 +1,0 @@
-const FootSection = () => {};
-
-export { FootSection };
