@@ -10,13 +10,11 @@ import { Unauthorized } from "./Unauthorized";
 import { NotFound } from "./NotFound";
 import { Login } from "./Admin/Login";
 import {About as EditAbout} from "./Admin/About"
+import { Navbar } from "../components/Navbar"
+import { Footer } from "../components/Footer"
 
-export const RoutedContent = () => {
-
-	
+export default function Index(){
 	return (
-		<div className="container mx-auto p-5">
-			Hi Mom
-		</div>
+		<Home />
 	);
 };

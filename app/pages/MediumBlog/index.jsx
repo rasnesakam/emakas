@@ -3,7 +3,7 @@ import { MediumBlogItem } from "./components"
 import { SearchBar } from "../../src/components/SearchBar"
 import { fetchData } from "../../src/functions/fetchData";
 
-export const MediumBlogs = () =>{
+const MediumBlogs = () =>{
 
     const [items,setItems] = useState({feed:"",items:[],status:"ok"});
     useEffect(() => {
@@ -29,3 +29,5 @@ export const MediumBlogs = () =>{
         </div>
     );
 }
+
+export default MediumBlogs;

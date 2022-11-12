@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST={"Admin\\Post\\index.jsx -> @ckeditor/ckeditor5-build-classic":{"id":"Admin\\Post\\index.jsx -> @ckeditor/ckeditor5-build-classic","files":["static/chunks/node_modules_ckeditor_ckeditor5-build-classic_build_ckeditor_js.js"]},"Admin\\Post\\index.jsx -> @ckeditor/ckeditor5-react":{"id":"Admin\\Post\\index.jsx -> @ckeditor/ckeditor5-react","files":["static/chunks/node_modules_ckeditor_ckeditor5-react_dist_ckeditor_js.js"]}}
+self.__REACT_LOADABLE_MANIFEST={}
