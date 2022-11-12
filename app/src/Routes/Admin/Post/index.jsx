@@ -1,10 +1,21 @@
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import { MetaDatas } from './components';
 
 const Post = () =>{
+	let metadata = {
+
+	};
+
+	function sub () {
+		alert(metadata.name)
+	}
 
 	return <>
 		<div>
+			<div>
+				<input type="text" onChange={(e) => {metadata.name = e.target.value}} />
+			</div>
 			<CKEditor
 				editor={ClassicEditor}
 				data = "<h1>Start Typing!</h1>"
@@ -23,6 +34,7 @@ const Post = () =>{
 					console.log( 'Focus.', editor );
 				} }
 				/>
+			<button onClick={sub}>Kaydet lo</button>
 		</div>
 	</>;
 }
