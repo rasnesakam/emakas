@@ -15,10 +15,10 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/MediumBlog": [
+    "/Blogs": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/MediumBlog.js"
+      "static/chunks/pages/Blogs.js"
     ],
     "/_app": [
       "static/chunks/webpack.js",

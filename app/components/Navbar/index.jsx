@@ -1,4 +1,4 @@
-import { Link } from "next/Link";
+import Link from 'next/link';
 
 function Navbar() {
   return (
@@ -9,17 +9,17 @@ function Navbar() {
 		</p>
 	  </div>
       <ul className="flex flex-row justify-around align-items items-stretch">
-        <li className="p-2 bg-primary text-secondary hover:bg-secondary hover:text-primary">
-          <p href="/" className="">Ana Sayfa</p>
+        <li key="1" className="p-2 bg-primary text-secondary hover:bg-secondary hover:text-primary">
+          <Link href="/" className="">Ana Sayfa</Link>
         </li>
-        <li className="p-2 bg-primary text-secondary hover:bg-secondary hover:text-primary">
-          <p href="blog" className="">Blog</p>
+        <li key="2" className="p-2 bg-primary text-secondary hover:bg-secondary hover:text-primary">
+          <Link href="Blogs" className="">Blog</Link>
         </li>
-		<li className="p-2 bg-primary text-secondary hover:bg-secondary hover:text-primary">
-          <p href="unauthorized" className="">Servisler</p>
+		<li key="3" className="p-2 bg-primary text-secondary hover:bg-secondary hover:text-primary">
+          <Link href="unauthorized" className="">Servisler</Link>
         </li>
-        <li className="p-2 bg-primary text-secondary hover:bg-secondary hover:text-primary">
-          <p href="about">Hakkında</p>
+        <li key="4" className="p-2 bg-primary text-secondary hover:bg-secondary hover:text-primary">
+          <Link href="about">Hakkında</Link>
         </li>
       </ul>
     </nav>
