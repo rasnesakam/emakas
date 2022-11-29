@@ -1,4 +1,5 @@
-const { PrismaClient } = require("@prisma/client");
+import { PrismaClient } from '@prisma/client'
+
 const express = require("express");
 
 const router = express.Router();
@@ -23,9 +24,12 @@ router.route("/").get(
 	}
 );
 
-router.route("/").post(
+router.route("/post").post(
 	(req,res) => {
 		async function upload(){
+			
+			/*
+			
 			let metadata = await prisma.metaData.create({
 				data: {
 					visible: true,
@@ -43,17 +47,17 @@ router.route("/").post(
 					category: true
 				}
 			});
+			
+			*/
+
 			let post = await prisma.post.create({
 				data: {
 					title: req.body.title,
 					content: req.body.content,
-					featuredImg: req.body.featuredImg,
-					metadata: metadata
-				},
-				include: {
-					metadata: true
+					featuredImg: req.body.featuredImg
 				}
 			})
+			res.status(201).send();
 		};
 
 		upload().catch((err) => {
