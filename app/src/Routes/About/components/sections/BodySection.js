@@ -1,4 +1,0 @@
-
-const BodySection = () => {};
-
-export { BodySection };
