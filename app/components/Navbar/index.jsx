@@ -13,7 +13,7 @@ function Navbar() {
           <Link href="/" className="">Ana Sayfa</Link>
         </li>
         <li key="2" className="p-2 bg-primary text-secondary hover:bg-secondary hover:text-primary">
-          <Link href="Blogs" className="">Blog</Link>
+          <Link href="mediumblog" className="">Blog</Link>
         </li>
 		<li key="3" className="p-2 bg-primary text-secondary hover:bg-secondary hover:text-primary">
           <Link href="unauthorized" className="">Servisler</Link>

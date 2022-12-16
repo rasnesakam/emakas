@@ -22,4 +22,4 @@ const HeadSection = () => {
 	</div>
 };
 
-export { HeadSection };
+export default HeadSection;

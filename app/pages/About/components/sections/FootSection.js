@@ -1,3 +1,3 @@
 const FootSection = () => {};
 
-export { FootSection };
+export default FootSection;

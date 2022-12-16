@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 
 const MediumBlogItem = (props) =>{
 
@@ -18,8 +17,4 @@ const MediumBlogItem = (props) =>{
 
 };
 
-const Pagination = (props) => {
-	
-};
-
-export { MediumBlogItem };
+export default MediumBlogItem;

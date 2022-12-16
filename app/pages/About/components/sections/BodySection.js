@@ -1,4 +1,4 @@
 
 const BodySection = () => {};
 
-export { BodySection };
+export default BodySection;

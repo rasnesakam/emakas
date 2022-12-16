@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const Home = () => {
+const Home = () => {
 
 	let links = [
 		{title:"Github",link:"https://www.github.com/rasnesakam", desc:""},
@@ -31,3 +31,4 @@ export const Home = () => {
 		
     </>);
 }
+export default Home;
