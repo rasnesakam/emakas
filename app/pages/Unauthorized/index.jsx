@@ -1,4 +1,4 @@
-import { HoldOn } from "../../components/UnAuthorized";
+import { HoldOn } from "../../src/components/UnAuthorized";
 
 const Unauthorized = () => {
 

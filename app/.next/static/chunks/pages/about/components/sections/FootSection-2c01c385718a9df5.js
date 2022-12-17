@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[34],{1910:function(n,t,o){(window.__NEXT_P=window.__NEXT_P||[]).push(["/about/components/sections/FootSection",function(){return o(7969)}])},7969:function(n,t,o){"use strict";o.r(t),t.default=function(){}}},function(n){n.O(0,[774,888,179],function(){return n(n.s=1910)}),_N_E=n.O()}]);
