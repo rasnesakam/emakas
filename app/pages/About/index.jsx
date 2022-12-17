@@ -1,10 +1,13 @@
-import { HeadSection, BodySection, FootSection } from "./components";
-export const About = () => {
-    return (<div>
+import {HeadSection, BodySection, FootSection} from "../../src/components/About/index";
+
+const About = () => {
+    return (<>
         
 		<HeadSection />
 		<BodySection />
 		<FootSection />
 		
-    </div>);
-}
+    </>);
+};
+
+export default About;

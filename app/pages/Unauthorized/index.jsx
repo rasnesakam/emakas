@@ -1,4 +1,4 @@
-import { HoldOn } from "../../src/components/Forbidden";
+import { HoldOn } from "../../src/components/UnAuthorized";
 
 const Unauthorized = () => {
 
@@ -10,4 +10,4 @@ const Unauthorized = () => {
 	)
 };
 
-export {Unauthorized};
+export default Unauthorized;
