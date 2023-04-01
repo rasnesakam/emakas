@@ -17,10 +17,11 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                ground:"#E0E0CE",
-                hover:"#FFD8A9",
-                primary:"#000",
-                secondary:"#F2AF29"
+                ground: "#fafafa",
+				onGround: "#e4e5f1",
+                hover: "#d2d3db",
+                primary: "#484b6a",
+                secondary: "#9394a5"
             }
         },
 		screens:{
