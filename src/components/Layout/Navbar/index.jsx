@@ -1,28 +1,32 @@
 import Link from 'next/link';
+import {useState} from "react";
 
 function Navbar() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const menuItems = [
+    {title: "Ana Sayfa",href:"/"},
+    {title: "Blog", href: "/mediumblog"},
+    {title: "Bağlantılar", href: "/linktree"},
+    {title: "Servisler",href:"/unauthorized"},
+    {title: "Hakkında",href:"/about"}
+  ];
+  const inactiveStyle = "p-2 text-secondary font-bold hover:text-primary hover:underline";
+  const activeStyle = "p-2 font-bold text-primary underline"
   return (
-    <nav className="bg-secondary border-primary flex flex-row justify-between">
-      <div className="flex flex-col pl-2 justify-center">
-		<p href="/">
-			<strong><big><i>ensar makas</i></big></strong>
-		</p>
-	  </div>
-      <ul className="flex flex-row justify-around align-items items-stretch">
-        <li key="1" className="p-2 bg-primary text-secondary hover:bg-secondary hover:text-primary">
-          <Link href="/" className="">Ana Sayfa</Link>
-        </li>
-        <li key="2" className="p-2 bg-primary text-secondary hover:bg-secondary hover:text-primary">
-          <Link href="mediumblog" className="">Blog</Link>
-        </li>
-		<li key="3" className="p-2 bg-primary text-secondary hover:bg-secondary hover:text-primary">
-          <Link href="unauthorized" className="">Servisler</Link>
-        </li>
-        <li key="4" className="p-2 bg-primary text-secondary hover:bg-secondary hover:text-primary">
-          <Link href="about">Hakkında</Link>
-        </li>
-      </ul>
-    </nav>
+  <nav className="bg-onGround border-primary py-2">
+    <div className="flex flex-row justify-center">
+      <Link href="/" className="mx-auto text-center">
+          <strong><big><i className="text-2xl">ensar makas</i></big></strong>
+      </Link>
+    </div>
+    <ul className="flex mt-4 flex-row justify-evenly align-items items-stretch">
+      {menuItems.map((item, index) => (
+          <li key={index} className={ index === activeIndex ? activeStyle : inactiveStyle }>
+            <Link href={item.href} onClick={() => setActiveIndex(index)}>{item.title}</Link>
+          </li>
+      ))}
+    </ul>
+  </nav>
   );
 }
 
