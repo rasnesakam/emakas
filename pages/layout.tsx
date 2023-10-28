@@ -1,7 +1,8 @@
+import { ReactNode } from "react"
 import { Footer, Navbar } from "../src/components/Layout"
 import Head from "next/head"
 
-export default function Layout({children}){
+export default function Layout({children}: {children: ReactNode}){
 	return <>
 	
 		<div className="bg-ground">

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import MediumBlogItem from "../../src/components/MediumBlog"
-import { fetchData } from "../../functions/fetchData";
+import MediumBlogItem from "@src/components/MediumBlog"
+import { fetchData } from "@src/functions/fetchData";
 
 const MediumBlogs = () =>{
 

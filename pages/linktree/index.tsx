@@ -5,7 +5,7 @@ export default function Index(){
 	const [data, setData] = useState({links: []});
 	useEffect(() => {
 		async function fetchData(){
-			const res = await fetch("http://localhost:3000/api/linktree");
+			const res = await fetch("/api/linktree");
 			return await res.json();
 		}
 		fetchData()
@@ -14,7 +14,7 @@ export default function Index(){
 	},[]);
 	return (
 		<>
-			{data.links.map((item) => {
+			{data.links.map((item: {link:string,title:string,desc:string}) => {
 
 				return (
 					<a href={item.link} target="_blank" className="my-5 mx-auto block sm:w-1/2 md:w-3/4">
