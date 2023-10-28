@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-const HoldOn = (props) => {
+const HoldOn = (props: {message: string}) => {
 
 	return <div>
 		<p className="text-xl text-center fot-bold">Hold on...</p>

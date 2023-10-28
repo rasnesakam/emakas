@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const SearchBar = function(props){
+const SearchBar = function(props: {onSearch: (search: string) => void }){
     const [search, setSearch] = useState("");
     return (<>
         <form onSubmit={(e)=>{

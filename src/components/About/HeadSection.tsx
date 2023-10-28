@@ -1,6 +1,7 @@
-import { useState, useEffect, Children } from "react";
+import { StaticImageData } from "next/image";
+import { useState, useEffect, Children, ReactNode } from "react";
 
-const HeadSection = ({imgSrc, title, children}) => {
+const HeadSection = ({imgSrc, title, children}: {imgSrc: string, title:string, children: ReactNode}) => {
 	let message = `
 	Merhaba. Ben Ensar. Beykent üniversitesi bilgisayar mühendisliği 4. sınıf öğrencisiyim. Resim yapmayı ve tevuklu pilavı severim
 	`;

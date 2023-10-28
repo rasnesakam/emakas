@@ -1,5 +1,5 @@
 
-const MediumBlogItem = (props) =>{
+const MediumBlogItem = (props: {item: {link:string, title: string, thumbnail: string,author: string}}) =>{
 
     return (
     <a href={props.item.link} target="_blank" className="">
