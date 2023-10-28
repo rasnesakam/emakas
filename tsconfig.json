@@ -14,8 +14,14 @@
 	  "isolatedModules": true,
 	  "jsx": "preserve",
 	  "incremental": true,
-	  "typeRoots": ["./types", "./node_modules/@types"]
+	  "typeRoots": ["./types", "./node_modules/@types"],
+	  "baseUrl": "./",
+	  "paths": {
+		"@src/*":["src/*"],
+		"@page/*":["pages/*"],
+		"@style/*":["styles/*"]
+	  }
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/SearchBar/index.jsx"],
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/SearchBar/index.tsx", "src/components/Github/GithubUserFeed/index.tsx"],
 	"exclude": ["node_modules", "types"]
   }
