@@ -1,3 +1,5 @@
+const { nextui } = require("@nextui-org/theme");
+
 module.exports = {
     mode: "jit",
     purge: [
@@ -12,16 +14,16 @@ module.exports = {
     	"./pages/**/*.{js,ts,jsx,tsx}",
     	"./components/**/*.{js,ts,jsx,tsx}",
 		"./src/**/*.{js,ts,jsx,tsx}",
-		"./public/index.html"
+		"./public/index.html",
+		"./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
     ],
     theme: {
         extend: {
             colors: {
-                ground: "#fafafa",
-				onGround: "#e4e5f1",
-                hover: "#d2d3db",
-                primary: "#484b6a",
-                secondary: "#9394a5"
+				ground: "#040D12",
+                primary: "#183D3D",
+                secondary: "#5C8374",
+				foreground: "#93B1A6"
             }
         },
 		screens:{
@@ -35,5 +37,5 @@ module.exports = {
 			// => @media (min-width: 1440px) { ... }
 		}
     },
-    plugins: []
+    plugins: [nextui]
 }

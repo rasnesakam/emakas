@@ -15,7 +15,7 @@ export default function Layout({children}: {children: ReactNode}){
 			<link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico" />
 		</Head>
 		<Navbar />
-		<main className="px-10 min-h-screen">
+		<main className="px-20 min-h-screen text-foreground">
 			{children}
 		</main>
 		<Footer />
