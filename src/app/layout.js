@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
             <head>
                 <link rel="icon" href="/icons/icons8-e-50.ico" />
             </head>
-            <body className={`${inter.className} w-screen`}>
+            <body className={`${inter.className} h-screen`}>
                 <Navbar />
                 <div className="w-11/12 pt-10 mx-auto">
                     {children}
