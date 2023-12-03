@@ -3,3 +3,7 @@
 @tailwind utilities;
 
 
+@media (prefers-color-scheme: dark){
+    color: #000;
+    background: #FFF
+}
