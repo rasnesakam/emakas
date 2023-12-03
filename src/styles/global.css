@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+
+    .card {
+        @apply my-4 p-4 rounded-md shadow-md;
+    }
+}
+
 
 @media (prefers-color-scheme: dark){
     color: #000;
