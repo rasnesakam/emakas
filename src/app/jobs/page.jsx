@@ -29,11 +29,25 @@ export default function Jobs(){
             learnedTechs: [".NET Core"]
         },
     ]
+    const volunteerWorks = [
+        {
+            title: "IEEE Beykent Üniversitesi Computer Society İdari Kurul Başkanı",
+            description:"Pandemi döneminde gerçekleşen idari kurul başkanlığım boyunca yarışma ve seminerler düzenledik",
+            startDate:"Ağustos 2021",
+            endDate:"Temmuz 2022"
+        },
+        {
+            title: "IEEE Beykent Üniversitesi Öğrenci Kolu Aktif Üye",
+            description:"Aktif üyeliğim boyunca çeşitli komitelerdeki projelerde yer aldım",
+            startDate:"Ağustos 2020",
+            endDate:"Temmuz 2021"
+        }
+    ]
     return <div>
-
+            <div className="mx-auto text-2xl font-bold lg:w-8/12">İş Tecrübelerim</div>
             <ul className="">
                 {jobs.map((item,index) => (
-                    <li key={index} className="mx-auto my-4 p-4 border lg:w-8/12 border-secondary rounded-md shadow-md transition hover:scale-105">
+                    <li key={index} className="card mx-auto w-8/12 border border-secondary transition hover:scale-105">
                         <div className="flex justify-between">
                             <span className="text-2xl font-bold">{item.jobTitle}</span>
                             <span>({item.startDate} {item.endDate})</span>
@@ -48,6 +62,21 @@ export default function Jobs(){
                     </li>
                 ))}
             </ul>
+
+            <div className="mx-auto text-2xl font-bold lg:w-8/12">Gönüllü Çalışmalar</div>
+            <ul className="">
+                {volunteerWorks.map((item,index) => (
+                    <li key={index} className="card mx-auto w-8/12 border border-secondary transition hover:scale-105">
+                        <div className="flex justify-between">
+                            <span className="text-2xl font-bold">{item.title}</span>
+                            <span>({item.startDate} {item.endDate})</span>
+                        </div>
+                        <p className="mt-2">{item.description}</p>
+                    </li>
+                ))}
+            </ul>
+
+
 
         </div>
 }
