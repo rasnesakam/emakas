@@ -1,8 +1,78 @@
-import Image from 'next/image'
-
+import { projects,links } from "@/data"
+import { faGithub, faInstagram, faLinkedinIn, faTwitter } from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { EnvelopeIcon } from "@heroicons/react/24/outline"
+import Link from "next/link"
 export default function Home() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-         </main>
+        <div className="lg:w-9/12 lg:mx-auto">
+            <div className="md:grid md:grid-cols-4  md:items-start md:gap-4 flex flex-col items-center">
+                <div className="col-span-1 row-span-2 flex flex-col items-center">
+                    <img src="https://avatars.githubusercontent.com/u/45129228?v=4" className="w-full rounded-full" />
+                    <h1 className="text-3xl font-bold mt-6">Ensar Makas</h1>
+                    <h2 className="text-xl font-semibold mt-2">Yazılım Mühendisi</h2>
+                    <div className="flex flex-row justify-center items-center">
+                        <Link href={links.linkedIn} className="w-8 h-8 bg-primary p-2 m-1 rounded-full">
+                            <FontAwesomeIcon icon={faLinkedinIn} className=" text-ground"/>
+                        </Link>
+                        <Link href={links.github} className="w-8 h-8 bg-primary p-2 m-1 rounded-full">
+                            <FontAwesomeIcon icon={faGithub} className=" text-ground"/>
+                        </Link>
+                        <Link href={links.twitter} className="w-8 h-8 bg-primary p-2 m-1 rounded-full">
+                            <FontAwesomeIcon icon={faTwitter} className=" text-ground"/>
+                        </Link>
+                        <Link href={links.instagram} className="w-8 h-8 bg-primary p-2 m-1 rounded-full">
+                            <FontAwesomeIcon icon={faInstagram} className=" text-ground"/>
+                        </Link>
+                    </div>
+                    <div className="mt-2 ">
+                        <Link href={`mailto:${links.gmail}`} className="rounded-full p-1 bg-secondary text-primary flex flex-row justify-start items-center">
+                            <EnvelopeIcon className="p-1 -ml-2 -my-2 h-8 w-8 bg-primary text-ground rounded-full"/>
+                            <span className="ml-2 mr-2">{links.gmail}</span>
+                        </Link>
+                    </div>
+                </div>
+                <div className="col-span-3 row-span-1 my-4 text-lg">
+                    <p>
+                        Merhaba!
+                    </p>
+                    <p>
+                        Beykent Üniversitesi 4. sınıf öğrencisiyim.<br />
+                        Bilgisayar bilimleri ve yazılım dünyasında durmadan kendimi geliştirmeye gayret gösteriyorum.<br />
+                        Üniversite hayatım boyunca yeni teknolojiler öğreniyor ve çeşitli alanlarda uygulamalar geliştiriyorum.<br />
+                    </p>
+                </div>
+                <div className="col-span-3 row-span-1 items-center text-lg">
+                    <ul className="grid grid-cols-3 gap-2 items-center">
+                        {
+                            projects.slice(0, 3).map((item, index) => (
+                                <li key={index} className="card border h-full flex flex-col justify-between border-secondary">
+                                    <div className="flex flex-row items-center gap-4">
+                                        <h3 className="text-2xl font-semibold">{item.name}</h3>
+                                        <Link href={item.github_link} className="w-6 h-6">
+                                            <FontAwesomeIcon icon={faGithub} className="w-6 h-6"/>
+                                        </Link>
+                                    </div>
+                                    <div className="flex flex-row flex-wrap gap-1">
+                                        {item.techStack.map((sItem, sIndex) => (
+                                            <span key={sIndex} className="text-sm p-1 bg-secondary rounded-sm">{sItem}</span>
+                                        ))}
+                                    </div>
+                                </li>
+                            ))
+                        }
+                        <li></li>
+                        <li>
+                            <Link href="/projects" className="card block w-full text-center border border-secondary">
+                                <span className="text-lg font-semibold">Tümünü Gör</span>
+                            </Link>
+                        </li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <div className="mt-6">
+            </div>
+        </div>
     )
 }
