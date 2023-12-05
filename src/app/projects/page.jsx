@@ -10,9 +10,9 @@ export default function Projects(){
                 <li key={index} className="card border border-secondary transition hover:scale-105">
                 <p className="text-xl font-semibold">{item.name}</p>
                 <p className="text-md mt-2">{item.description}</p>
-                <div className="mt-2 flex flex-row items-center">
+                <div className="mt-2 flex flex-row flex-wrap items-center gap-2">
                     {item.techStack.map((sItem,sIndex) => (
-                        <span key={sIndex} className="bg-secondary text-sm rounded-sm p-2 mr-1">
+                        <span key={sIndex} className="bg-secondary text-sm rounded-sm p-2">
                         {sItem}
                         </span>
                     ))}
