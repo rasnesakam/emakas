@@ -12,18 +12,18 @@ export default function Home() {
                     <h1 className="text-3xl font-bold mt-6">Ensar Makas</h1>
                     <h2 className="text-xl font-semibold mt-2">Yazılım Mühendisi</h2>
                     <div className="flex flex-row justify-center items-center">
-                        <Link href={links.linkedIn} className="w-8 h-8 bg-primary p-2 m-1 rounded-full">
+                        <a href={links.linkedIn} target="_blankr" className="w-8 h-8 bg-primary p-2 m-1 rounded-full">
                             <FontAwesomeIcon icon={faLinkedinIn} className=" text-ground"/>
-                        </Link>
-                        <Link href={links.github} className="w-8 h-8 bg-primary p-2 m-1 rounded-full">
+                        </a>
+                        <a href={links.github} target="_blank" className="w-8 h-8 bg-primary p-2 m-1 rounded-full">
                             <FontAwesomeIcon icon={faGithub} className=" text-ground"/>
-                        </Link>
-                        <Link href={links.twitter} className="w-8 h-8 bg-primary p-2 m-1 rounded-full">
+                        </a>
+                        <a href={links.twitter} target="_blank" className="w-8 h-8 bg-primary p-2 m-1 rounded-full">
                             <FontAwesomeIcon icon={faTwitter} className=" text-ground"/>
-                        </Link>
-                        <Link href={links.instagram} className="w-8 h-8 bg-primary p-2 m-1 rounded-full">
+                        </a>
+                        <a href={links.instagram} target="_blank" className="w-8 h-8 bg-primary p-2 m-1 rounded-full">
                             <FontAwesomeIcon icon={faInstagram} className=" text-ground"/>
-                        </Link>
+                        </a>
                     </div>
                     <div className="mt-2 ">
                         <Link href={`mailto:${links.gmail}`} className="rounded-full p-1 bg-secondary text-primary flex flex-row justify-start items-center">
@@ -40,6 +40,7 @@ export default function Home() {
                         Beykent Üniversitesi 4. sınıf öğrencisiyim.<br />
                         Bilgisayar bilimleri ve yazılım dünyasında durmadan kendimi geliştirmeye gayret gösteriyorum.<br />
                         Üniversite hayatım boyunca yeni teknolojiler öğreniyor ve çeşitli alanlarda uygulamalar geliştiriyorum.<br />
+                        Bilişim dünyasında yeni keşifler yapmak için tutkulu bir biçimde durmadan kendime yeni bilgiler ve deneyimler katıyorum <br/>
                     </p>
                 </div>
                 <div className="col-span-3 row-span-1 items-center text-lg">
