@@ -43,7 +43,7 @@ export default function Home() {
                     </p>
                 </div>
                 <div className="col-span-3 row-span-1 items-center text-lg">
-                    <ul className="grid grid-cols-3 gap-2 items-center">
+                    <ul className="flex flex-col md:grid md:grid-cols-3 gap-2 md:items-center">
                         {
                             projects.slice(0, 3).map((item, index) => (
                                 <li key={index} className="card border h-full flex flex-col justify-between border-secondary">
