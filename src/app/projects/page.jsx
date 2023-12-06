@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import Link from "next/link"
 export default function Projects(){
-    return <div className="lg:w-8/12 mx-auto">
+    return <div className="sm:w-10/12 md:w-9/12 lg:w-8/12 mx-auto">
         <span className="text-2xl font-semibold">Projelerim</span>
         <ul>
             {projects.map((item,index) => (
@@ -12,7 +12,7 @@ export default function Projects(){
                 <p className="text-md mt-2">{item.description}</p>
                 <div className="mt-2 flex flex-row flex-wrap items-center gap-2">
                     {item.techStack.map((sItem,sIndex) => (
-                        <span key={sIndex} className="bg-secondary text-sm rounded-sm p-2">
+                        <span key={sIndex} className="bg-secondary text-sm rounded-sm p-1">
                         {sItem}
                         </span>
                     ))}

@@ -2,8 +2,8 @@ import { jobs, volunteerWorks} from "@/data"
 
 export default function Jobs(){
 
-   return <div>
-            <div className="mx-auto text-2xl font-bold lg:w-8/12">İş Tecrübelerim</div>
+   return <div className="sm:w-10/12 md:w-9/12 lg:w-8/12 mx-auto">
+            <div className="text-2xl font-semibold">İş Tecrübelerim</div>
             <ul className="">
                 {jobs.map((item,index) => (
                     <li key={index} className="card mx-auto border border-secondary transition hover:scale-105">
@@ -22,7 +22,7 @@ export default function Jobs(){
                 ))}
             </ul>
 
-            <div className="mx-auto text-2xl font-bold lg:w-8/12">Gönüllü Çalışmalar</div>
+            <div className="text-2xl font-semibold">Gönüllü Çalışmalar</div>
             <ul className="">
                 {volunteerWorks.map((item,index) => (
                     <li key={index} className="card mx-auto border border-secondary transition hover:scale-105">
