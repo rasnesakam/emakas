@@ -7,16 +7,10 @@ export const metadata = {
 
 export default async function Blogs(){
     const feeds = await getMediumFeeds("emakas");
-    const rss = feeds.mediumFeedsJson.rss;
-    if (rss == undefined)
-        rss = {
-            channel: [
-                {
-                    link: "",
-                    item: []
-                }
-            ]
-        }
+    const rss = feeds.mediumFeedsJson.rss || {
+        channel:[{link:"",item:[]}]
+    };
+
     return <div className="sm:w-10/12 md:w-9/12 lg:w-8/12 mx-auto">
             <h2 className="text-2xl font-semibold hover:underline">
                 <a target="_blank" href={rss.channel[0].link}>Medium Yazılarım</a>
