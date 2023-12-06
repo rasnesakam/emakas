@@ -10,7 +10,7 @@ export default async function Blogs(){
     const rss = undefined || feeds.mediumFeedsJson.rss;
     return <div className="sm:w-10/12 md:w-9/12 lg:w-8/12 mx-auto">
             <h2 className="text-2xl font-semibold hover:underline">
-                <a target="_blank" href={myChannel.link}>Medium Yazılarım</a>
+                <a target="_blank" href={rss.channel[0].link}>Medium Yazılarım</a>
             </h2>
             <div>
                 <ul>
