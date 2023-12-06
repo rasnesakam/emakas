@@ -39,8 +39,8 @@ export default function Home() {
                     <p>
                         Beykent Üniversitesi 4. sınıf öğrencisiyim.<br />
                         Bilgisayar bilimleri ve yazılım dünyasında durmadan kendimi geliştirmeye gayret gösteriyorum.<br />
-                        Üniversite hayatım boyunca yeni teknolojiler öğreniyor ve çeşitli alanlarda uygulamalar geliştiriyorum.<br />
-                        Bilişim dünyasında yeni keşifler yapmak için tutkulu bir biçimde durmadan kendime yeni bilgiler ve deneyimler katıyorum <br/>
+                        Üniversiteye başladığım günden beri yeni teknolojiler öğreniyor ve çeşitli alanlarda uygulamalar geliştiriyorum.<br />
+                        
                     </p>
                 </div>
                 <div className="col-span-3 row-span-1 items-center text-lg">
