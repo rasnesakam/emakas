@@ -1,5 +1,9 @@
 import { educations } from "@/data"
 
+export const metadata = {
+    title: "Ensar Makas - Eğitim",
+    description: "Eğitim Bilgilerim"
+}
 export default function Education(){
     return <div className="sm:w-10/12 md:w-9/12 lg:w-8/12 mx-auto">
             <span className="text-2xl font-semibold">Eğitim Bilgilerim</span>

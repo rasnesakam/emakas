@@ -1,5 +1,9 @@
 import { jobs, volunteerWorks} from "@/data"
 
+export const metadata = {
+    title: "Ensar Makas - İş Tecrübelerim",
+    description: "İş Tecrübelerim"
+}
 export default function Jobs(){
 
    return <div className="sm:w-10/12 md:w-9/12 lg:w-8/12 mx-auto">

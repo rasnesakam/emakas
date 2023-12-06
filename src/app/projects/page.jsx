@@ -2,6 +2,12 @@ import { projects } from "@/data"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import Link from "next/link"
+
+export const metadata = {
+    title: "Ensar Makas - Projelerim",
+    description: "Projelerim"
+}
+
 export default function Projects(){
     return <div className="sm:w-10/12 md:w-9/12 lg:w-8/12 mx-auto">
         <span className="text-2xl font-semibold">Projelerim</span>

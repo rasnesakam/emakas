@@ -1,6 +1,6 @@
 
 export async function getMediumFeeds(username){
-    const mediumLink = `https://medium.com/feed/@${username}`;
+    const mediumLink = `https://medium.com/@${username}/feed`;
     let parser = require("xml2js")
     let mediumFeeds = await fetch(mediumLink).then(response => response.text())
     let mediumFeedsJson = {}
