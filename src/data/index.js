@@ -1,6 +1,6 @@
 const jobs = [
     {
-        jobTitle: "Intern",
+        jobTitle: "Stajyer",
         company: "Koç Sistem",
         description:"Burada iki ay boyunca profesyonel bir ekiple çalışma fırsatı edindim. Bu süreçte alışveriş api uygulaması geliştirirken proje yönetimimi Agile-Scrum prensibine göre yaptım",
         startDate:"Kasım-2022",
@@ -51,7 +51,7 @@ const educations = [
         branch: "Bilgisayar Mühendisliği",
         startDate: "Ağustos 2019",
         endDate: "Devam",
-        description: "Tüm derslerim bitti, sadece stajım kaldı"
+        description: "Tüm derslerim bitti, sadece stajım kaldı."
     },
     {
         university: "Kaptan Ahmet Erdoğan Anadolu İmam Hatip Lisesi",
