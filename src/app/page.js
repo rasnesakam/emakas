@@ -34,13 +34,12 @@ export default function Home() {
                 </div>
                 <div className="col-span-3 row-span-1 my-4 text-lg">
                     <p>
-                        Merhaba!
+                        Merhaba, ben Ensar Makas.
                     </p>
                     <p>
-                        Beykent Üniversitesi 4. sınıf öğrencisiyim.<br />
-                        Bilgisayar bilimleri ve yazılım dünyasında durmadan kendimi geliştirmeye gayret gösteriyorum.<br />
-                        Üniversiteye başladığım günden beri yeni teknolojiler öğreniyor ve çeşitli alanlarda uygulamalar geliştiriyorum.<br />
-                        
+                        İnternet teknolojileri alanında deneyimli ve çok yönlü bir yazılım geliştiriciyim.
+                        Yenilikçi düşünme kabiliyetim ve sonuç odaklı problem çözme yaklaşımım ile projelere değer katmayı hedefliyorum.
+                        Mümkün olduğunca yeni teknolojileri deneyerek farklı bakış açıları elde ediyor ve bilgi birikimimi sürekli olarak güncelliyorum.                        
                     </p>
                 </div>
                 <div className="col-span-3 row-span-1 items-center text-lg">
