@@ -1,5 +1,5 @@
 import { projects,links } from "@/data"
-import { faGithub, faInstagram, faLinkedinIn, faTwitter } from "@fortawesome/free-brands-svg-icons"
+import { faGithub, faInstagram, faLinkedinIn, faTwitter, faMedium } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { EnvelopeIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
@@ -12,17 +12,20 @@ export default function Home() {
                     <h1 className="text-3xl font-bold mt-6">Ensar Makas</h1>
                     <h2 className="text-xl font-semibold mt-2">Yazılım Mühendisi</h2>
                     <div className="flex flex-row justify-center items-center">
-                        <a href={links.linkedIn} target="_blankr" className="w-8 h-8 bg-primary p-2 m-1 rounded-full">
+                        <a href={links.linkedIn} target="_blankr" className="w-8 h-8 bg-primary p-2 m-1 rounded-full flex justify-center items-center">
                             <FontAwesomeIcon icon={faLinkedinIn} className=" text-ground"/>
                         </a>
-                        <a href={links.github} target="_blank" className="w-8 h-8 bg-primary p-2 m-1 rounded-full">
+                        <a href={links.github} target="_blank" className="w-8 h-8 bg-primary p-2 m-1 rounded-full flex justify-center items-center">
                             <FontAwesomeIcon icon={faGithub} className=" text-ground"/>
                         </a>
-                        <a href={links.twitter} target="_blank" className="w-8 h-8 bg-primary p-2 m-1 rounded-full">
+                        <a href={links.twitter} target="_blank" className="w-8 h-8 bg-primary p-2 m-1 rounded-full flex justify-center items-center">
                             <FontAwesomeIcon icon={faTwitter} className=" text-ground"/>
                         </a>
-                        <a href={links.instagram} target="_blank" className="w-8 h-8 bg-primary p-2 m-1 rounded-full">
+                        <a href={links.instagram} target="_blank" className="w-8 h-8 bg-primary p-2 m-1 rounded-full flex justify-center items-center">
                             <FontAwesomeIcon icon={faInstagram} className=" text-ground"/>
+                        </a>
+                        <a href={links.medium} target="_blank" className="w-8 h-8 bg-primary p-2 m-1 rounded-full flex justify-center items-center">
+                            <FontAwesomeIcon icon={faMedium} className=" text-ground"/>
                         </a>
                     </div>
                     <div className="mt-2 ">
