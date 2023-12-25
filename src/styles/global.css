@@ -5,7 +5,7 @@
 @layer components {
 
     .card {
-        @apply my-4 p-4 rounded-md shadow-md;
+        @apply my-4 p-4 rounded-md shadow-xl;
     }
 }
 
