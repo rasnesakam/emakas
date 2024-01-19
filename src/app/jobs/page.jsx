@@ -1,11 +1,14 @@
-import { jobs, volunteerWorks} from "@/data"
+"use client"
+import db from "@/data"
+import {useLanguageContext} from "@/components/LanguageContextAdapter";
 
 export const metadata = {
     title: "Ensar Makas - İş Tecrübelerim",
     description: "İş Tecrübelerim"
 }
 export default function Jobs(){
-
+    const {language} = useLanguageContext();
+    const jobs = db[language.lang].jobs
    return <div className="sm:w-10/12 md:w-9/12 lg:w-8/12 mx-auto">
             <div className="text-2xl font-semibold">İş Tecrübelerim</div>
             <ul className="">

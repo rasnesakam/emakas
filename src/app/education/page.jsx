@@ -1,10 +1,14 @@
-import { educations } from "@/data"
+"use client"
+import db from "@/data"
+import {useLanguageContext} from "@/components/LanguageContextAdapter";
 
 export const metadata = {
     title: "Ensar Makas - Eğitim",
     description: "Eğitim Bilgilerim"
 }
 export default function Education(){
+    const {language} = useLanguageContext();
+    const educations = db[language.lang].education;
     return <div className="sm:w-10/12 md:w-9/12 lg:w-8/12 mx-auto">
             <span className="text-2xl font-semibold">Eğitim Bilgilerim</span>
             <ul>

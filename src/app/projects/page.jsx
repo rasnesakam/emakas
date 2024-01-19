@@ -1,7 +1,9 @@
-import { projects } from "@/data"
+"use client"
+import db from "@/data"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import Link from "next/link"
+import {useLanguageContext} from "@/components/LanguageContextAdapter";
 
 export const metadata = {
     title: "Ensar Makas - Projelerim",
@@ -9,6 +11,8 @@ export const metadata = {
 }
 
 export default function Projects(){
+    const {language} = useLanguageContext();
+    const projects = db[language.lang].projects;
     return <div className="sm:w-10/12 md:w-9/12 lg:w-8/12 mx-auto">
         <span className="text-2xl font-semibold">Projelerim</span>
         <ul>

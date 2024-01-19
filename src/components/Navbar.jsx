@@ -1,13 +1,24 @@
 "use client"
 import Link from "next/link"
+import {useLanguageContext} from "@/components/LanguageContextAdapter";
 
 const Navbar = () => {
-    const menuItems = [
-        {href: "/projects",label: "Projelerim"},
-        {href: "/jobs",label: "Çalışma Hayatım"},
-        {href: "/education",label: "Eğitim Geçmişim"},
-        {href: "/blogs",label: "Blog yazılarım"}
-    ];
+    const menuItemsLanguages = {
+        "TURKISH": [
+            {href: "/projects",label: "Projelerim"},
+            {href: "/jobs",label: "Çalışma Hayatım"},
+            {href: "/education",label: "Eğitim Geçmişim"},
+            {href: "/blogs",label: "Blog yazılarım"}
+        ],
+        "ENGLISH": [
+            {href: "/projects",label: "My Projects"},
+            {href: "/jobs",label: "Work Experiences"},
+            {href: "/education",label: "Education"},
+            {href: "/blogs",label: "Blog Posts"}
+        ]
+    }
+    const {language} = useLanguageContext();
+    const menuItems = menuItemsLanguages[language.lang]
     
     function openMenu(e){
         let menus = document.getElementsByClassName("mobile-menu");

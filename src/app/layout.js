@@ -2,6 +2,7 @@ import { Navbar } from "@/components/Navbar"
 import { Inter } from 'next/font/google'
 import '@/styles/global.css'
 import Script from "next/script";
+import { LanguageContextAdapter } from "@/components/LanguageContextAdapter";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,11 +27,20 @@ export default function RootLayout({ children }) {
                   gtag('config', 'G-9Y0DHSYFVV');
                 `
             }</Script>
-            <body className={`${inter.className} h-screen`}>
-                <Navbar />
-                <main className="w-11/12 pt-10 pb-10 mx-auto">
-                    {children}
-                </main>
+            <body className={`${inter.className} h-screen flex flex-col justify-between`}>
+                <LanguageContextAdapter>
+                    <Navbar />
+                    <main className="w-11/12 pt-10 pb-10 mx-auto block">
+                        {children}
+                    </main>
+                    <footer className="flex flex-row gap-1 justify-center p-2">
+                        <span>Saygılar,</span>
+                        <span>Sevgiler,</span>
+                        <span>Hürmetler.</span>
+                        <span> © </span>
+                        <span>2023</span>
+                    </footer>
+                </LanguageContextAdapter>
             </body>
         </html>
     )

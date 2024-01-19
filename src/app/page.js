@@ -1,9 +1,17 @@
-import { projects,links } from "@/data"
+"use client"
+import db from "@/data"
 import { faGithub, faInstagram, faLinkedinIn, faTwitter, faMedium } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { EnvelopeIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
+import {supportedLanguages,LanguageContext, useLanguageContext} from "@/components/LanguageContextAdapter";
+import {getString} from "@/strings";
+
 export default function Home() {
+    const {language } = useLanguageContext();
+    const projects = db[language.lang].projects;
+    const links = db[language.lang].links;
+    const about = db[language.lang].about;
     return (
         <div className="lg:w-9/12 lg:mx-auto">
             <div className="md:grid md:grid-cols-4  md:items-start md:gap-4 flex flex-col items-center">
@@ -37,12 +45,10 @@ export default function Home() {
                 </div>
                 <div className="col-span-3 row-span-1 my-4 text-lg">
                     <p>
-                        Merhaba, ben Ensar Makas.
+                        {about.title}
                     </p>
                     <p>
-                        İnternet teknolojileri alanında deneyimli ve çok yönlü bir yazılım geliştiriciyim.
-                        Yenilikçi düşünme kabiliyetim ve sonuç odaklı problem çözme yaklaşımım ile projelere değer katmayı hedefliyorum.
-                        Mümkün olduğunca yeni teknolojileri deneyerek farklı bakış açıları elde ediyor ve bilgi birikimimi sürekli olarak güncelliyorum.                        
+                        {about.content}
                     </p>
                 </div>
                 <div className="col-span-3 row-span-1 items-center text-lg">
@@ -67,7 +73,7 @@ export default function Home() {
                         <li></li>
                         <li>
                             <Link href="/projects" className="card block w-full text-center border border-secondary">
-                                <span className="text-lg font-semibold">Tümünü Gör</span>
+                                <span className="text-lg font-semibold">{getString("seeAll",language)}</span>
                             </Link>
                         </li>
                         <li></li>
