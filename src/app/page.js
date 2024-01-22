@@ -73,7 +73,7 @@ export default function Home() {
                         <li></li>
                         <li>
                             <Link href="/projects" className="card block w-full text-center border border-secondary">
-                                <span className="text-lg font-semibold">{getString("seeAll",language)}</span>
+                                <span className="text-lg font-semibold">{getString("see all",language).toUpperCase()}</span>
                             </Link>
                         </li>
                         <li></li>
