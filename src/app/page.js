@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { EnvelopeIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
 import {supportedLanguages,LanguageContext, useLanguageContext} from "@/components/LanguageContextAdapter";
-import {getString} from "@/strings";
+import {getString, STRING_FORMATS} from "@/strings";
 
 export default function Home() {
     const {language } = useLanguageContext();
@@ -73,7 +73,7 @@ export default function Home() {
                         <li></li>
                         <li>
                             <Link href="/projects" className="card block w-full text-center border border-secondary">
-                                <span className="text-lg font-semibold">{getString("see all",language).toUpperCase()}</span>
+                                <span className="text-lg font-semibold">{getString("see all",language, STRING_FORMATS.CAPITALIZED)}</span>
                             </Link>
                         </li>
                         <li></li>

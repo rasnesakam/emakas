@@ -1,15 +1,25 @@
 "use client"
 import { getMediumFeeds } from "@/functions/getMediumFeeds"
+import {getString, STRING_FORMATS} from "@/strings";
+import {useLanguageContext} from "@/components/LanguageContextAdapter";
+import {useEffect, useState} from "react";
 
-export default async function Blogs(){
-    const feeds = await getMediumFeeds("emakas");
-    const rss = feeds.mediumFeedsJson.rss || {
-        channel:[{link:"",item:[]}]
-    };
 
+export default function Blogs(){
+    const {language} = useLanguageContext()
+    const [rss, setRss] = useState({channel: [{link:"",item:[]}]})
+
+    useEffect(() => {
+        fetch("/api/mediumblog")
+            .then(response => response.json())
+            .then(feeds => {
+                console.log(feeds)
+                setRss(feeds.content.mediumFeedsJson.rss)
+            });
+    },[])
     return <div className="sm:w-10/12 md:w-9/12 lg:w-8/12 mx-auto">
             <h2 className="text-2xl font-semibold hover:underline">
-                <a target="_blank" href={rss.channel[0].link}>Medium Yazılarım</a>
+                <a target="_blank" href={rss.channel[0].link}>{getString("medium posts", language,STRING_FORMATS.CAPITALIZED)}</a>
             </h2>
             <div>
                 <ul>

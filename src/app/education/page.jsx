@@ -1,12 +1,13 @@
 "use client"
 import db from "@/data"
 import {useLanguageContext} from "@/components/LanguageContextAdapter";
+import {getString, STRING_FORMATS} from "@/strings";
 
 export default function Education(){
     const {language} = useLanguageContext();
     const educations = db[language.lang].education;
     return <div className="sm:w-10/12 md:w-9/12 lg:w-8/12 mx-auto">
-            <span className="text-2xl font-semibold">Eğitim Bilgilerim</span>
+            <span className="text-2xl font-semibold">{getString("education history", language, STRING_FORMATS.CAPITALIZED)}</span>
             <ul>
                 {educations.map((item,index) => (
                     <li key={index} className="card border border-secondary mx-auto transition hover:scale-105">
