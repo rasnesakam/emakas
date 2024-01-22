@@ -7,7 +7,10 @@ import { LanguageContextAdapter } from "@/components/LanguageContextAdapter";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-    title: 'Ensar Makas',
+    title: {
+        template: '%s | Ensar Makas',
+        default: "Ensar Makas"
+    },
     description: 'Geleceği kodlayan insan',
     
 }

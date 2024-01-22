@@ -1,9 +1,5 @@
+"use client"
 import { getMediumFeeds } from "@/functions/getMediumFeeds"
-
-export const metadata = {
-    title: "Ensar Makas - Blog",
-    description: "Blog Yazılarım"
-}
 
 export default async function Blogs(){
     const feeds = await getMediumFeeds("emakas");

@@ -2,10 +2,6 @@
 import db from "@/data"
 import {useLanguageContext} from "@/components/LanguageContextAdapter";
 
-export const metadata = {
-    title: "Ensar Makas - Eğitim",
-    description: "Eğitim Bilgilerim"
-}
 export default function Education(){
     const {language} = useLanguageContext();
     const educations = db[language.lang].education;
