@@ -18,7 +18,7 @@ export default function Home() {
                 <div className="col-span-1 row-span-2 flex flex-col items-center">
                     <img src="https://avatars.githubusercontent.com/u/45129228?v=4" className="w-full rounded-full" />
                     <h1 className="text-3xl font-bold mt-6">Ensar Makas</h1>
-                    <h2 className="text-xl font-semibold mt-2">Yazılım Mühendisi</h2>
+                    <h2 className="text-xl font-semibold mt-2">{about.jobTitle}</h2>
                     <div className="flex flex-row justify-center items-center">
                         <a href={links.linkedIn} target="_blankr" className="w-8 h-8 bg-primary p-2 m-1 rounded-full flex justify-center items-center">
                             <FontAwesomeIcon icon={faLinkedinIn} className=" text-ground"/>
@@ -73,7 +73,7 @@ export default function Home() {
                         <li></li>
                         <li>
                             <Link href="/projects" className="card block w-full text-center border border-secondary">
-                                <span className="text-lg font-semibold">{getString("seeAll",language)}</span>
+                                <span className="text-lg font-semibold">{getString("see all",language).toUpperCase()}</span>
                             </Link>
                         </li>
                         <li></li>

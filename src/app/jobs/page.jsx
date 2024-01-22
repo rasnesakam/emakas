@@ -1,16 +1,14 @@
 "use client"
 import db from "@/data"
 import {useLanguageContext} from "@/components/LanguageContextAdapter";
+import {getString} from "@/strings";
 
-export const metadata = {
-    title: "Ensar Makas - İş Tecrübelerim",
-    description: "İş Tecrübelerim"
-}
 export default function Jobs(){
     const {language} = useLanguageContext();
     const jobs = db[language.lang].jobs
+    const volunteerWorks = db[language.lang].volunteerWorks;
    return <div className="sm:w-10/12 md:w-9/12 lg:w-8/12 mx-auto">
-            <div className="text-2xl font-semibold">İş Tecrübelerim</div>
+            <div className="text-2xl font-semibold">{getString("work history", language).toUpperCase()}</div>
             <ul className="">
                 {jobs.map((item,index) => (
                     <li key={index} className="card mx-auto border border-secondary transition hover:scale-105">
@@ -29,7 +27,7 @@ export default function Jobs(){
                 ))}
             </ul>
 
-            <div className="text-2xl font-semibold">Gönüllü Çalışmalar</div>
+            <div className="text-2xl font-semibold">{getString("volunteer works",language).toUpperCase()}</div>
             <ul className="">
                 {volunteerWorks.map((item,index) => (
                     <li key={index} className="card mx-auto border border-secondary transition hover:scale-105">

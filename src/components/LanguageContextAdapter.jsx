@@ -6,8 +6,8 @@ import {createContext, useContext, useState} from "react";
 const LanguageContext = createContext();
 
 const supportedLanguages = {
-    English: {lang:"ENGLISH", label:"English"},
-    Turkish: {lang: "TURKISH", label:"Türkçe"}
+    English: {lang:"ENGLISH", label:"English", slug: "en"},
+    Turkish: {lang: "TURKISH", label:"Türkçe", slug: "tr"}
 }
 
 const LanguageContextAdapter = ({children}) => {

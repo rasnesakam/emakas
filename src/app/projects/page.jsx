@@ -5,11 +5,6 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import Link from "next/link"
 import {useLanguageContext} from "@/components/LanguageContextAdapter";
 
-export const metadata = {
-    title: "Ensar Makas - Projelerim",
-    description: "Projelerim"
-}
-
 export default function Projects(){
     const {language} = useLanguageContext();
     const projects = db[language.lang].projects;
