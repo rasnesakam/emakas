@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
-import {useLanguageContext} from "@/components/LanguageContextAdapter";
-
+import {supportedLanguages, useLanguageContext} from "@/components/LanguageContextAdapter";
+import {  Dropdown,  DropdownTrigger,  DropdownMenu,  DropdownSection,  DropdownItem} from "@nextui-org/dropdown";
 const Navbar = () => {
     const menuItemsLanguages = {
         "TURKISH": [
@@ -17,27 +17,47 @@ const Navbar = () => {
             {href: "/blogs",label: "Blog Posts"}
         ]
     }
-    const {language} = useLanguageContext();
+    const {language, setLanguage} = useLanguageContext();
     const menuItems = menuItemsLanguages[language.lang]
-    
+
+    function languageDropdownMenu(){
+        return <>
+            <Dropdown>
+                <DropdownTrigger>
+                    <li className="mx-auto my-auto p-2">{language.slug.toUpperCase()}</li>
+                </DropdownTrigger>
+                <DropdownMenu aria-label="Static Actions">
+                    {
+                        Object.keys(supportedLanguages)
+                            .map((key, index) =>
+                                (<DropdownItem key={`language-${supportedLanguages[key].slug}`}
+                                               onClick={(e) => setLanguage(supportedLanguages[key])}>
+                                    {supportedLanguages[key].label}
+                                </DropdownItem> ))
+                    }
+                </DropdownMenu>
+            </Dropdown>
+        </>
+    }
+
     function openMenu(e){
         let menus = document.getElementsByClassName("mobile-menu");
         let togglers = document.getElementsByClassName("mobile-menu-toggle")
         for (let i = 0; i < menus.length; i++){
             let menu = menus.item(i);
             let dataset = menu.dataset;
-            if (dataset.visible == undefined || dataset.visible == "false")
+            if (dataset.visible === undefined || dataset.visible === "false")
                 dataset.visible = true;
-            else if (dataset.visible == "true"){
+            else if (dataset.visible === "true"){
                 dataset.visible = false;
             } 
         }
         for (let i = 0; i < togglers.length; i++){
             let toggler = togglers.item(i);
             let dataset = toggler.dataset;
-            if (dataset.toggle == undefined || dataset.toggle == "off")
+            if (dataset.toggle === undefined || dataset.toggle === "off")
                 dataset.toggle = "on";
-            else if (dataset.toggle == "on")
+            else if (dataset.toggle === "on")
                 dataset.toggle = "off"
         }
     }
@@ -54,7 +74,7 @@ const Navbar = () => {
                     <span className="w-6 h-1 block bg-secondary rounded-full transition origin-bottom-left group-data-[toggle=off]:rotate-0 group-data-[toggle=on]:-rotate-45"></span>
                 </button>
                 <ul className="hidden md:flex md:flex-row divide-x">
-
+                    {languageDropdownMenu()}
                     {
                         menuItems.map((item,index) => (
                             <li key={index} className="p-2">
@@ -69,7 +89,7 @@ const Navbar = () => {
             </div>
             <div className="mobile-menu transition-all scale-0 origin-top-left sm:origin-top h-0 duration-600 data-[visible=true]:h-min data-[visible=true]:scale-100 pt-4" >
                 <ul className="sm:flex sm:flex-row sm:justify-center md:divide-x">
-
+                    {languageDropdownMenu()}
                     {
                         menuItems.map((item,index) => (
                             <li key={index} className="p-2">
@@ -84,5 +104,6 @@ const Navbar = () => {
             </div>
         </nav>
 }
+
 
 export {Navbar};
