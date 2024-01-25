@@ -64,7 +64,7 @@ export default function Home() {
                                     </div>
                                     <div className="flex flex-row flex-wrap gap-1">
                                         {item.techStack.map((sItem, sIndex) => (
-                                            <span key={sIndex} className="text-sm p-1 bg-secondary rounded-sm">{sItem}</span>
+                                            <span key={sIndex} className="text-sm p-1 bg-secondary rounded-md">{sItem}</span>
                                         ))}
                                     </div>
                                 </li>

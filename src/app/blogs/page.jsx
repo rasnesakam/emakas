@@ -31,7 +31,7 @@ export default function Blogs(){
                                 <p className="text-xl">{item.title[0]}</p>
                                 <div className="flex flex-row flex-wrap gap-3 mt-2">
                                     {item.category.map((sit, six)=>(
-                                        <span key={six} className="text-sm p-1 rounded-sm bg-secondary">{sit}</span>
+                                        <span key={six} className="text-sm p-1 rounded-md bg-secondary">#{sit}</span>
                                     ))}
                                 </div>
                             </a>

@@ -18,7 +18,7 @@ export default function Projects(){
                 <p className="text-md mt-2">{item.description}</p>
                 <div className="mt-2 flex flex-row flex-wrap items-center gap-2">
                     {item.techStack.map((sItem,sIndex) => (
-                        <span key={sIndex} className="bg-secondary text-sm rounded-sm p-1">
+                        <span key={sIndex} className="bg-secondary text-sm rounded-md p-1">
                         {sItem}
                         </span>
                     ))}
