@@ -24,7 +24,7 @@ const Navbar = () => {
         return <>
             <Dropdown>
                 <DropdownTrigger>
-                    <li className="mx-auto my-auto p-2">{language.slug.toUpperCase()}</li>
+                    <li className="card my-auto p-2 mx-2 cursor-pointer">{language.slug.toUpperCase()}</li>
                 </DropdownTrigger>
                 <DropdownMenu aria-label="Static Actions">
                     {
