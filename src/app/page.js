@@ -81,6 +81,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="mt-6">
+                <h2 className="text-2xl font-semibold">What Do I do</h2>
             </div>
         </div>
     )
