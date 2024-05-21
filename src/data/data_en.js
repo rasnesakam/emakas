@@ -12,6 +12,14 @@ const about = {
 
 const jobs = [
     {
+        jobTitle: "Associate Software Developer",
+        company: "Veripark",
+        description:"I am developing CRM solutions based on Microsoft Dynamics products for enterprise companies within Veripark.",
+        startDate:"March-2024",
+        endDate:"Present",
+        learnedTechs: ["C#","Typescript",".NET","Azure","Microsoft Dynamics 365"]
+    },
+    {
         jobTitle: "Intern",
         company: "Koç Sistem",
         description: "During my two months here, I had the opportunity to work with a professional team. I managed the project following the Agile-Scrum principles while developing a shopping API application.",
