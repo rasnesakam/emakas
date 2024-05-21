@@ -17,7 +17,7 @@ const jobs = [
         description:"I am developing CRM solutions based on Microsoft Dynamics products for enterprise companies within Veripark.",
         startDate:"March-2024",
         endDate:"Present",
-        learnedTechs: ["C#","Typescript",".NET","Azure","Microsoft Dynamics 365"]
+        learnedTechs: ["C#","Typescript",".NET","Azure","Microsoft Dynamics 365", "CRM"]
     },
     {
         jobTitle: "Intern",
