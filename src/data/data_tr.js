@@ -10,11 +10,19 @@ const about = {
 }
 const jobs = [
     {
+        jobTitle: "Software Developer",
+        company: "Veripark",
+        description:"Veripark bünyesinde kurumsal firmalar için Microsoft Dynamics ürününü temel alan CRM çözümleri geliştiriyorum",
+        startDate:"Aralık-2024",
+        endDate:"Devam Ediyor",
+        learnedTechs: ["C#","Typescript",".NET","Azure","Microsoft Dynamics 365", "CRM", "WCF"]
+    },
+    {
         jobTitle: "Associate Software Developer",
         company: "Veripark",
         description:"Veripark bünyesinde kurumsal firmalar için Microsoft Dynamics ürününü temel alan CRM çözümleri geliştiriyorum",
-        startDate:"Mart-2022",
-        endDate:"Devam Ediyor",
+        startDate:"Mart-2024",
+        endDate:"Aralık-2024",
         learnedTechs: ["C#","Typescript",".NET","Azure","Microsoft Dynamics 365", "CRM"]
     },
     {
