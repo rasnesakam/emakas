@@ -98,7 +98,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="mt-6">
-                <ul className="flex flex-col md:grid md:grid-cols-4 gap-2 md:items-center">
+                <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 md:items-center">
                         {
                             mediumBlogs.map((item, index) => (
                                 <li key={index} className="card border h-full flex flex-col justify-between border-secondary">
@@ -118,9 +118,8 @@ export default function Home() {
                                 </li>
                             ))
                         }
-                        <li></li>
                         <li>
-                            <Link href="/projects" className="card block w-full text-center border border-secondary">
+                            <Link href="/projects" className="card block sm:col-span-2 md:col-span-4 text-center border border-secondary">
                                 <span className="text-lg font-semibold">{getString("see all",language, STRING_FORMATS.CAPITALIZED)}</span>
                             </Link>
                         </li>
