@@ -20,12 +20,12 @@ export default function Home() {
     useEffect(() => {
         getMediumFeedsApi().then(feeds => {
             console.log("items", feeds.content.mediumFeedsJson.rss.channel[0].item);
-            setMediumBlogs([]);
+            setMediumBlogs(feeds.content.mediumFeedsJson.rss.channel[0].item);
         });
         return () => {
             setMediumBlogs([])
         }
-    })
+    }, [])
 
     return (
         <div className="lg:w-9/12 lg:mx-auto">
