@@ -1,8 +1,8 @@
 "use client"
-import { getMediumFeeds } from "@/functions/getMediumFeeds"
 import {getString, STRING_FORMATS} from "@/strings";
 import {useLanguageContext} from "@/components/LanguageContextAdapter";
 import {useEffect, useState} from "react";
+import { getMediumFeedsApi } from "@/functions/getMediumFeedsApi";
 
 
 export default function Blogs(){
@@ -10,12 +10,12 @@ export default function Blogs(){
     const [rss, setRss] = useState({channel: [{link:"",item:[]}]})
 
     useEffect(() => {
-        fetch("/api/mediumblog")
-            .then(response => response.json())
-            .then(feeds => {
-                console.log(feeds)
-                setRss(feeds.content.mediumFeedsJson.rss)
-            });
+        getMediumFeedsApi().then(feeds => {
+            setRss(feeds.content.mediumFeedsJson.rss)
+        })
+        return () => {
+            setRss([])
+        }
     },[])
     return <div className="sm:w-10/12 md:w-9/12 lg:w-8/12 mx-auto">
             <h2 className="text-2xl font-semibold hover:underline">
