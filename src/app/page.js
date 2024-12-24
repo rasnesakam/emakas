@@ -98,7 +98,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="mt-6">
-                <ul className="flex flex-col md:grid md:grid-cols-3 gap-2 md:items-center">
+                <ul className="flex flex-col md:grid md:grid-cols-4 gap-2 md:items-center">
                         {
                             mediumBlogs.map((item, index) => (
                                 <li key={index} className="card border h-full flex flex-col justify-between border-secondary">
