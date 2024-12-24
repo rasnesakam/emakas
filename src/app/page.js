@@ -18,7 +18,10 @@ export default function Home() {
     const about = db[language.lang].about;
 
     useEffect(() => {
-        getMediumFeedsApi().then(feeds => setMediumBlogs(feeds.content.mediumFeedsJson.rss.channel[0].item)).then((_) =>console.log(mediumBlogs));
+        getMediumFeedsApi().then(feeds => {
+            console.log("items", feeds.content.mediumFeedsJson.rss.channel[0].item);
+            setMediumBlogs(feeds.content.mediumFeedsJson.rss.channel[0].item);
+        });
         return () => {
             setMediumBlogs([])
         }
