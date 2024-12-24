@@ -105,7 +105,7 @@ export default function Home() {
                                     <div className="flex flex-row items-center">
                                         <h3 className="text-2xl font-semibold">
                                             {item.title[0]}
-                                            <Link href={item.link[0]} className="w-6 h-6">
+                                            <Link href={item.link[0]} className="w-6 h-6 mx-2">
                                                 <FontAwesomeIcon icon={faMedium} className="w-6 h-6"/>
                                             </Link>
                                         </h3>
