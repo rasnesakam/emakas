@@ -123,7 +123,6 @@ export default function Home() {
                                 <span className="text-lg font-semibold">{getString("see all",language, STRING_FORMATS.CAPITALIZED)}</span>
                             </Link>
                         </li>
-                        <li></li>
                     </ul>
             </div>
         </div>
