@@ -1,6 +1,6 @@
 "use client"
 import db from "@/data"
-import { faGithub, faInstagram, faLinkedinIn, faTwitter, faMedium } from "@fortawesome/free-brands-svg-icons"
+import { faGithub, faInstagram, faLinkedinIn, faTwitter, faMedium, faYoutube } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { EnvelopeIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
@@ -34,6 +34,9 @@ export default function Home() {
                         </a>
                         <a href={links.medium} target="_blank" className="w-8 h-8 bg-primary p-2 m-1 rounded-full flex justify-center items-center">
                             <FontAwesomeIcon icon={faMedium} className=" text-ground"/>
+                        </a>
+                        <a href={links.youtube} target="_blank" className="w-8 h-8 bg-primary p-2 m-1 rounded-full flex justify-center items-center">
+                            <FontAwesomeIcon icon={faYoutube} className=" text-ground"/>
                         </a>
                     </div>
                     <div className="mt-2 ">

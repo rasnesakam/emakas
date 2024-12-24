@@ -150,6 +150,7 @@ const links = {
     gmail: "ensar.makas@gmail.com",
     instagram: "https://www.instagram.com/ensar.makas/",
     medium: "https://medium.com/@emakas",
+    youtube: "https://www.youtube.com/@rasnesakam",
     others: []
 };
 
