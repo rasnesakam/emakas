@@ -19,8 +19,7 @@ export default function Home() {
 
     useEffect(() => {
         getMediumFeedsApi().then(feeds => {
-            console.log("items", feeds.content.mediumFeedsJson.rss.channel[0].item);
-            setMediumBlogs(feeds.content.mediumFeedsJson.rss.channel[0].item);
+            setMediumBlogs(feeds.content.mediumFeedsJson.rss.channel[0].item.slice(0,4));
         });
         return () => {
             setMediumBlogs([])
@@ -103,11 +102,13 @@ export default function Home() {
                         {
                             mediumBlogs.map((item, index) => (
                                 <li key={index} className="card border h-full flex flex-col justify-between border-secondary">
-                                    <div className="flex flex-row items-center gap-4">
-                                        <h3 className="text-2xl font-semibold">{item.title[0]}</h3>
-                                        <Link href={item.link[0]} className="w-6 h-6">
-                                            <FontAwesomeIcon icon={faMedium} className="w-6 h-6"/>
-                                        </Link>
+                                    <div className="flex flex-row items-center">
+                                        <h3 className="text-2xl font-semibold">
+                                            {item.title[0]}
+                                            <Link href={item.link[0]} className="w-6 h-6">
+                                                <FontAwesomeIcon icon={faMedium} className="w-6 h-6"/>
+                                            </Link>
+                                        </h3>
                                     </div>
                                     <div className="flex flex-row flex-wrap gap-1">
                                         {item.category.map((sItem, sIndex) => (
