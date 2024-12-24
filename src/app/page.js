@@ -118,8 +118,8 @@ export default function Home() {
                                 </li>
                             ))
                         }
-                        <li>
-                            <Link href="/projects" className="card block sm:col-span-2 md:col-span-4 text-center border border-secondary">
+                        <li className="sm:col-span-2 md:col-span-4">
+                            <Link href="/projects" className="card block text-center border border-secondary">
                                 <span className="text-lg font-semibold">{getString("see all",language, STRING_FORMATS.CAPITALIZED)}</span>
                             </Link>
                         </li>
