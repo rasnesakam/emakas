@@ -11,7 +11,7 @@ export default function Blogs(){
 
     useEffect(() => {
         getMediumFeedsApi().then(feeds => {
-            setRss(feeds.content.mediumFeedsJson.rss.channel[0])
+            setRss(feeds.content.mediumFeedsJson.rss)
         })
         return () => {
             setRss([])
