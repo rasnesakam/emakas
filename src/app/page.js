@@ -7,8 +7,8 @@ import Link from "next/link"
 import { useLanguageContext } from "@/components/LanguageContextAdapter";
 import { getString, STRING_FORMATS } from "@/strings";
 import { useEffect } from "react"
-import { getMediumFeeds } from "@/functions/getMediumFeeds"
 import { useState } from "react"
+import { getMediumFeedsApi } from "@/functions/getMediumFeedsApi"
 
 export default function Home() {
     const {language } = useLanguageContext();
@@ -18,7 +18,7 @@ export default function Home() {
     const about = db[language.lang].about;
 
     useEffect(() => {
-        getMediumFeeds().then(feeds => setMediumBlogs(feeds));
+        getMediumFeedsApi().then(feeds => setMediumBlogs(feeds));
         return () => {
             setMediumBlogs([])
         }
