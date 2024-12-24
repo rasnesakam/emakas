@@ -4,15 +4,15 @@ import { faGithub, faInstagram, faLinkedinIn, faTwitter, faMedium, faYoutube } f
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { EnvelopeIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
-import {supportedLanguages,LanguageContext, useLanguageContext} from "@/components/LanguageContextAdapter";
-import {getString, STRING_FORMATS} from "@/strings";
-import { useContext } from "react"
+import { useLanguageContext } from "@/components/LanguageContextAdapter";
+import { getString, STRING_FORMATS } from "@/strings";
 import { useEffect } from "react"
 import { getMediumFeeds } from "@/functions/getMediumFeeds"
+import { useState } from "react"
 
 export default function Home() {
     const {language } = useLanguageContext();
-    const [mediumBlogs, setMediumBlogs] = useContext([])
+    const [mediumBlogs, setMediumBlogs] = useState([])
     const projects = db[language.lang].projects;
     const links = db[language.lang].links;
     const about = db[language.lang].about;
