@@ -20,7 +20,7 @@ export default function Home() {
     useEffect(() => {
         getMediumFeedsApi().then(feeds => {
             console.log("items", feeds.content.mediumFeedsJson.rss.channel[0].item);
-            setMediumBlogs(feeds.content.mediumFeedsJson.rss.channel[0].item);
+            setMediumBlogs(feeds.content.mediumFeedsJson.rss.channel[0].item.slice(0,3));
         });
         return () => {
             setMediumBlogs([])
