@@ -104,13 +104,13 @@ export default function Home() {
                             mediumBlogs.map((item, index) => (
                                 <li key={index} className="card border h-full flex flex-col justify-between border-secondary">
                                     <div className="flex flex-row items-center gap-4">
-                                        <h3 className="text-2xl font-semibold">{item.name}</h3>
-                                        <Link href={item.github_link} className="w-6 h-6">
+                                        <h3 className="text-2xl font-semibold">{item.title[0]}</h3>
+                                        <Link href={item.link[0]} className="w-6 h-6">
                                             <FontAwesomeIcon icon={faMedium} className="w-6 h-6"/>
                                         </Link>
                                     </div>
                                     <div className="flex flex-row flex-wrap gap-1">
-                                        {item.techStack.map((sItem, sIndex) => (
+                                        {item.category.map((sItem, sIndex) => (
                                             <span key={sIndex} className="text-sm p-1 bg-secondary rounded-md">{sItem}</span>
                                         ))}
                                     </div>
