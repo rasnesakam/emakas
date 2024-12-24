@@ -6,12 +6,24 @@ import { EnvelopeIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
 import {supportedLanguages,LanguageContext, useLanguageContext} from "@/components/LanguageContextAdapter";
 import {getString, STRING_FORMATS} from "@/strings";
+import { useContext } from "react"
+import { useEffect } from "react"
+import { getMediumFeeds } from "@/functions/getMediumFeeds"
 
 export default function Home() {
     const {language } = useLanguageContext();
+    const [mediumBlogs, setMediumBlogs] = useContext([])
     const projects = db[language.lang].projects;
     const links = db[language.lang].links;
     const about = db[language.lang].about;
+
+    useEffect(() => {
+        getMediumFeeds().then(feeds => setMediumBlogs(feeds));
+        return () => {
+            setMediumBlogs([])
+        }
+    })
+
     return (
         <div className="lg:w-9/12 lg:mx-auto">
             <div className="md:grid md:grid-cols-4  md:items-start md:gap-4 flex flex-col items-center">
@@ -84,7 +96,32 @@ export default function Home() {
                 </div>
             </div>
             <div className="mt-6">
-                <h2 className="text-2xl font-semibold">What Do I do</h2>
+                <ul className="flex flex-col md:grid md:grid-cols-3 gap-2 md:items-center">
+                        {
+                            mediumBlogs.map((item, index) => (
+                                <li key={index} className="card border h-full flex flex-col justify-between border-secondary">
+                                    <div className="flex flex-row items-center gap-4">
+                                        <h3 className="text-2xl font-semibold">{item.name}</h3>
+                                        <Link href={item.github_link} className="w-6 h-6">
+                                            <FontAwesomeIcon icon={faMedium} className="w-6 h-6"/>
+                                        </Link>
+                                    </div>
+                                    <div className="flex flex-row flex-wrap gap-1">
+                                        {item.techStack.map((sItem, sIndex) => (
+                                            <span key={sIndex} className="text-sm p-1 bg-secondary rounded-md">{sItem}</span>
+                                        ))}
+                                    </div>
+                                </li>
+                            ))
+                        }
+                        <li></li>
+                        <li>
+                            <Link href="/projects" className="card block w-full text-center border border-secondary">
+                                <span className="text-lg font-semibold">{getString("see all",language, STRING_FORMATS.CAPITALIZED)}</span>
+                            </Link>
+                        </li>
+                        <li></li>
+                    </ul>
             </div>
         </div>
     )
