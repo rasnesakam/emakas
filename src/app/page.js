@@ -98,7 +98,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="mt-6">
-                <div className="font-semibold text-xl" >getString("medium posts", language,STRING_FORMATS.CAPITALIZED)</div>
+                <div className="font-semibold text-xl">{getString("medium posts", language,STRING_FORMATS.CAPITALIZED)}</div>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 md:items-center">
                         {
                             mediumBlogs.map((item, index) => (
