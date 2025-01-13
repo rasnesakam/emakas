@@ -8,13 +8,15 @@ const Navbar = () => {
             {href: "/projects",label: "Projelerim"},
             {href: "/jobs",label: "Çalışma Hayatım"},
             {href: "/education",label: "Eğitim Geçmişim"},
-            {href: "/blogs",label: "Blog yazılarım"}
+            {href: "/blogs",label: "Blog yazılarım"},
+            {href: "/contents/cv/ensar_makas_tr.pdf", label: "CV"}
         ],
         "ENGLISH": [
             {href: "/projects",label: "My Projects"},
             {href: "/jobs",label: "Work Experiences"},
             {href: "/education",label: "Education"},
-            {href: "/blogs",label: "Blog Posts"}
+            {href: "/blogs",label: "Blog Posts"},
+            {href: "/contents/cv/ensar_makas_en.pdf", label: "CV"}
         ]
     }
     const {language, setLanguage} = useLanguageContext();
