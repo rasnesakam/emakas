@@ -76,7 +76,7 @@ const educations = [
         university: "Beykent Üniversitesi",
         branch: "Bilgisayar Mühendisliği",
         startDate: "Ağustos 2019",
-        endDate: "Devam",
+        endDate: "Ekim 2024",
         description: "Tüm derslerim bitti, sadece stajım kaldı."
     },
     {

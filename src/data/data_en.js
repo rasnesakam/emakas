@@ -80,7 +80,7 @@ const educations = [
         university: "Beykent University",
         branch: "Computer Engineering",
         startDate: "August 2019",
-        endDate: "Ongoing",
+        endDate: "September 2024",
         description: "All my courses are completed, only my internship is pending."
     },
     {
