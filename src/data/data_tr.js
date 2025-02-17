@@ -124,12 +124,12 @@ const projects = [
         github_link:"https://github.com/rasnesakam/simple-dashboard",
         techStack: ["Next Js"]
     },
-    {
-        name:"Batarya Dünyası",
-        description:"Geliştirilen örnek bir E ticaret uygulaması. Ayrıca arkadaşım için geliştirilmeye devam ediliyor",
-        github_link:"https://github.com/rasnesakam/bataryadunyasi",
-        techStack: ["Next Js","Docker"]
-    },
+    // {
+    //     name:"Batarya Dünyası",
+    //     description:"Geliştirilen örnek bir E ticaret uygulaması. Ayrıca arkadaşım için geliştirilmeye devam ediliyor",
+    //     github_link:"https://github.com/rasnesakam/bataryadunyasi",
+    //     techStack: ["Next Js","Docker"]
+    // },
     {
         name:"Company Management System",
         description:"İlk iş tecrübelerim sırasında oluşturulan, Müşteri şirketler için görev yönetimini hedef alan MVC tabanlı bir sistem",

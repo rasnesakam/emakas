@@ -129,12 +129,12 @@ const projects = [
         github_link: "https://github.com/rasnesakam/simple-dashboard",
         techStack: ["Next Js"]
     },
-    {
-        name: "Battery World",
-        description: "An example e-commerce application developed. Also, it is being developed for my friend.",
-        github_link: "https://github.com/rasnesakam/bataryadunyasi",
-        techStack: ["Next Js", "Docker"]
-    },
+    // {
+    //     name: "Battery World",
+    //     description: "An example e-commerce application developed. Also, it is being developed for my friend.",
+    //     github_link: "https://github.com/rasnesakam/bataryadunyasi",
+    //     techStack: ["Next Js", "Docker"]
+    // },
     {
         name: "Company Management System",
         description: "A system based on MVC that focuses on task management for customer companies during my first job experiences.",
