@@ -6,7 +6,8 @@ const about = {
     Üniversitemdeki eğitim sürecim boyunca çeşitli etkinliklerde görev aldım ve profesyonel anlamda tecrübe edinmeye gayret gösterdim.
     Hedefim internet teknolojileri alanında sektörün ihtiyaçlarını gözeterek performans odaklı, kullanıcı ve geliştirici deneyimlerini üst düzeyde tutacak çözümler üretmek
                     
-    `
+    `,
+    sections: []
 }
 
 export {about}
