@@ -1,19 +1,9 @@
-import {about as aboutEn} from "@/data/about/en";
-import {about as aboutTr} from "@/data/about/tr";
-import {jobs as jobsEn} from "@/data/jobs/en";
-import {jobs as jobsTr} from "@/data/jobs/tr";
-import {projects as projectsEn} from "@/data/projects/en";
-import {projects as projectsTr} from "@/data/projects/tr";
-import {educations as educationEn} from "@/data/educations/en"
-import {educations as educationTr} from "@/data/educations/tr";
-import {volunteerWorks as volunteerWorksEn} from "@/data/volunteerWorks/en";
-import {volunteerWorks as volunteerWorksTr} from "@/data/volunteerWorks/tr";
-import {links} from "@/data/links";
-
+import {about as aboutTr, jobs as jobsTr, links as linksTr, projects as projectsTr, educations as educationTr, volunteerWorks as volunteerWorksTr} from "./data_tr"
+import {about as aboutEn, jobs as jobsEn, links as linksEn, projects as projectsEn, educations as educationEn, volunteerWorks as volunteerWorksEn} from "./data_en"
 const dbTr = {
     about: aboutTr,
     jobs: jobsTr,
-    links: links,
+    links: linksTr,
     projects: projectsTr,
     education: educationTr,
     volunteerWorks: volunteerWorksTr
@@ -21,7 +11,7 @@ const dbTr = {
 const dbEn = {
     about: aboutEn,
     jobs: jobsEn,
-    links: links,
+    links: linksEn,
     projects: projectsEn,
     education: educationEn,
     volunteerWorks: volunteerWorksEn
