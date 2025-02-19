@@ -8,10 +8,8 @@ const about = {
     `,
     sections: [
         {
-            title: "What do I do",
-            description: `
-            
-            `,
+            title: "",
+            description: ``,
         }
     ]
 };

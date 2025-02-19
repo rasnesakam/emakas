@@ -16,6 +16,7 @@ export default function Home() {
     const projects = db[language.lang].projects;
     const links = db[language.lang].links;
     const about = db[language.lang].about;
+<<<<<<< HEAD
 
     useEffect(() => {
         getMediumFeedsApi().then(feeds => {
@@ -26,6 +27,9 @@ export default function Home() {
         }
     }, [])
 
+=======
+    const sections = db[language.lang].about.sections;
+>>>>>>> 41aef1d (:/)
     return (
         <div className="lg:w-9/12 lg:mx-auto">
             <div className="md:grid md:grid-cols-4  md:items-start md:gap-4 flex flex-col items-center">
@@ -97,6 +101,7 @@ export default function Home() {
                     </ul>
                 </div>
             </div>
+<<<<<<< HEAD
             <div className="mt-6">
                 <div className="font-semibold text-xl">{getString("medium posts", language,STRING_FORMATS.CAPITALIZED)}</div>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 md:items-center">
@@ -126,6 +131,12 @@ export default function Home() {
                         </li>
                     </ul>
             </div>
+=======
+            {sections.map((sect, index) => (<div key={`section-${index}`} className="mt-6">
+                <h2 className="text-2xl font-semibold">{sect.title}</h2>
+                <p>{sect.description}</p>
+            </div>))}
+>>>>>>> 41aef1d (:/)
         </div>
     )
 }
