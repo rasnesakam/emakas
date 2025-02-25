@@ -1,7 +1,7 @@
 // Turkish to English Translation
 
 const about = {
-    title: "Hello, I'm Ensar Makas.",
+    title: "Hello, I'm Ensar.",
     jobTitle:"Software Engineer",
     content: `
     I am passionate about the internet and internet technologies, continuously developing my skills in this field.
