@@ -1,5 +1,5 @@
 const about = {
-    title: "Merhaba, ben Ensar Makas.",
+    title: "Merhaba, ben Ensar.",
     jobTitle:"Yazılım Mühendisi",
     content: `
     İnternet ve internet teknolojilerinde ilgili ve bu konuda kendimi geliştiren biriyim.
