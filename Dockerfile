@@ -1,4 +1,4 @@
-FROM node:18-alpine AS base
+FROM node:22-alpine3.19 AS base
 LABEL authors="emakas"
 
 WORKDIR /app
@@ -11,7 +11,7 @@ COPY . .
 
 RUN yarn build
 
-FROM node:18-alpine AS production
+FROM node:22-alpine3.19 AS production
 LABEL authors="emakas"
 
 WORKDIR /app
