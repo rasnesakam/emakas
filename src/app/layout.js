@@ -30,10 +30,10 @@ export default function RootLayout({ children }) {
                   gtag('config', 'G-9Y0DHSYFVV');
                 `
             }</Script>
-            <body className={`${inter.className} h-screen flex flex-col justify-between`}>
+            <body className={`${inter.className} flex flex-col justify-between`}>
                 <LanguageContextAdapter>
                     <Navbar />
-                    <main className="w-11/12 pt-10 pb-10 mx-auto block">
+                    <main className="w-11/12 h-screen pt-10 pb-10 mx-auto block">
                         {children}
                     </main>
                     <footer className="flex flex-row gap-1 justify-center p-2">
