@@ -1,3 +1,4 @@
+/*
 import firebase from "@firebase_config";
 import {
   collection,
@@ -38,3 +39,4 @@ export async function saveMessage({name, email, content}) {
     content: content,
   })
 }
+ */
