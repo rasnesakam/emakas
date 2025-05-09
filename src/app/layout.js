@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
             <body className={`${inter.className} flex flex-col justify-between`}>
                 <LanguageContextAdapter>
                     <Navbar />
-                    <main className="w-11/12 h-screen pt-10 pb-10 mx-auto block">
+                    <main className="w-11/12 min-h-screen pt-10 pb-10 mx-auto block">
                         {children}
                     </main>
                     <footer className="flex flex-row gap-1 justify-center p-2">
