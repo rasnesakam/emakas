@@ -81,7 +81,7 @@ const educations = [
         branch: "Computer Engineering",
         startDate: "August 2019",
         endDate: "September 2024",
-        description: "All my courses are completed, only my internship is pending."
+        description: "Throughout my university education, I took part in various activities and actively sought professional experience. Beside of studyin in university, I attended lot of organizations to enhance my knowledge in business and computer technology."
     },
     {
         university: "Captain Ahmet Erdogan Anatolian Imam Hatip High School",

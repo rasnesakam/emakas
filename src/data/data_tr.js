@@ -77,7 +77,7 @@ const educations = [
         branch: "Bilgisayar Mühendisliği",
         startDate: "Ağustos 2019",
         endDate: "Ekim 2024",
-        description: "Tüm derslerim bitti, sadece stajım kaldı."
+        description: ""
     },
     {
         university: "Kaptan Ahmet Erdoğan Anadolu İmam Hatip Lisesi",
